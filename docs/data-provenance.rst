@@ -36,6 +36,21 @@ Tracked artifacts
 - ``metadata/tsr/tsa27_tsr_cycle_timeline.csv``: cycle/model/caribou summary.
 - ``metadata/tsr/tsa27_caribou_evidence.csv``: short evidence excerpts with page references.
 
+Manifest and lock
+-----------------
+
+``metadata/data_manifest.yaml`` lists every input, its source, version, local or mirror path,
+and check. ``metadata/data_manifest.lock.yaml`` records the digest, size, and file count for
+every ``available`` entry. Regenerate the lock with:
+
+.. code-block:: bash
+
+   export FEMIC_EXTERNAL_DATA_ROOT="${FEMIC_EXTERNAL_DATA_ROOT:-../femic/external/femic-public-data/data}"
+   python scripts/verify_public_data.py --write-lock
+
+``to_fetch`` entries are reported as pending, not silently skipped. Each one names its
+``fetch_command`` or the request path for a non-catalogue layer.
+
 Records
 -------
 

@@ -21,3 +21,5 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 
 - P0 closed: pull request #7 merged as `b28b9e1`; the merge tree equals the approved head tree. Child issues #2–#6 are closed.
 - Activated P1 with parent issue #8 and child issues #9–#11. The first task is P1.1, the public-data manifest and verification script.
+
+- P1.1: added `metadata/data_manifest.yaml`, the verification script and tests, and `metadata/data_manifest.lock.yaml`. Mirror checks: 5 present (VRI 2025 layer, VRI VDYP input, TSA boundary, site productivity, 19-document TSR corpus), 7 pending `to_fetch`. Dashboard green (182 tests, 100% coverage).

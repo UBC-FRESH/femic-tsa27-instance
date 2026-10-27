@@ -1,0 +1,98 @@
+schema_version: 1
+generated_utc: "2026-10-27T00:00:00Z"
+root_env: FEMIC_EXTERNAL_DATA_ROOT
+entries:
+  - id: vri_2025_lyr
+    description: VRI 2025 forest cover layer
+    source: BCGW WHSE_FOREST_VEGETATION.VEG_COMP_LYR_R1_POLY
+    version: "2025"
+    status: available
+    required: true
+    local_path: data/bc/vri/2025/VEG_COMP_LYR_R1_POLY_2025.gdb
+    mirror_path: bc/vri/2025/VEG_COMP_LYR_R1_POLY_2025.gdb
+    check: path
+  - id: vri_2025_vdyp
+    description: VRI 2025 VDYP7 polygon and layer input
+    source: BCGW WHSE_FOREST_VEGETATION.VEG_COMP_VDYP7_INPUT_POLY_AND_LAYER
+    version: "2025"
+    status: available
+    required: true
+    local_path: data/bc/vri/2025/VEG_COMP_VDYP7_INPUT_POLY_AND_LAYER_2025.gdb
+    mirror_path: bc/vri/2025/VEG_COMP_VDYP7_INPUT_POLY_AND_LAYER_2025.gdb
+    check: path
+  - id: tsa_boundary
+    description: BC Timber Supply Area boundaries
+    source: BCGW WHSE_ADMIN_BOUNDARIES.FADM_TSA_SV
+    version: "current"
+    status: available
+    required: true
+    local_path: data/bc/tsa/FADM_TSA.gdb
+    mirror_path: bc/tsa/FADM_TSA.gdb
+    check: path
+  - id: site_productivity
+    description: Site productivity (site index) raster and band map
+    source: BCGW Site_Prod_BC
+    version: "current"
+    status: available
+    required: true
+    local_path: data/bc/siteprod/Site_Prod_BC.gdb
+    mirror_path: bc/siteprod/Site_Prod_BC.gdb
+    check: path
+  - id: bec_v12
+    description: Biogeoclimatic ecosystem classification, version 12
+    source: BCGW WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY
+    version: "12"
+    status: to_fetch
+    required: true
+    fetch_command: femic data bcdc-resolve WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY
+  - id: landscape_units
+    description: Landscape unit boundaries for LU/BEC seral accounting
+    source: BCGW WHSE_FOREST_VEGETATION.FADM_LANDSCAPE_UNIT_SV
+    version: "current"
+    status: to_fetch
+    required: true
+    fetch_command: femic data bcdc-resolve WHSE_FOREST_VEGETATION.FADM_LANDSCAPE_UNIT_SV
+  - id: caribou_uwr
+    description: Ungulate winter range, UWR u-3-005 (mountain caribou)
+    source: BCGW WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP
+    version: "2020 amendment"
+    status: to_fetch
+    required: true
+    fetch_command: femic data bcdc-resolve WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP
+  - id: caribou_core_matrix
+    description: Provincial caribou recovery core and matrix habitat
+    source: BC Provincial Caribou Recovery Program
+    version: "current"
+    status: to_fetch
+    required: true
+    note: Request the current core/matrix layer from the provincial caribou recovery team; record the delivery date and version.
+  - id: ogma_mogma
+    description: Spatial old-growth and mature-plus-old management areas
+    source: BCGW / approved Forest Stewardship Plans
+    version: "current"
+    status: to_fetch
+    required: true
+    note: Record whether the layer is legal or FSP-adopted.
+  - id: roads
+    description: Road and transportation network for harvest priority
+    source: BCGW road and transportation layers
+    version: "current"
+    status: to_fetch
+    required: true
+    fetch_command: femic data bcdc-resolve "roads"
+  - id: cutblocks
+    description: Consolidated cutblocks and depletion
+    source: BCGW WHSE_FOREST_VEGETATION.VEG_CONSOLIDATED_CUT_BLOCKS_SP
+    version: "current"
+    status: to_fetch
+    required: true
+    fetch_command: femic data bcdc-resolve WHSE_FOREST_VEGETATION.VEG_CONSOLIDATED_CUT_BLOCKS_SP
+  - id: tsr_corpus
+    description: TSA 27 TSR document corpus (1994–2022)
+    source: BC TSR FTP catalogue and www2 2022 data package
+    version: "1994–2022"
+    status: available
+    required: true
+    local_path: data/tsr/corpus/tsa/tsa_27
+    check: tsr_corpus
+    expected_count: 19
