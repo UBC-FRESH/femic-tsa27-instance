@@ -16,3 +16,8 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - Verification: `python scripts/dashboard.py` is green (lint, format, types, tests at 100% coverage, validator, docs). `femic prep validate-case --run-config config/run_profile.tsa27.yaml` passes with the public-data mirror.
 
 - Opened pull request #7 for P0 review; the dashboard is green and every child issue has evidence. P0 is `pr-open`.
+
+### P1 data materialization — 2026-10-27
+
+- P0 closed: pull request #7 merged as `b28b9e1`; the merge tree equals the approved head tree. Child issues #2–#6 are closed.
+- Activated P1 with parent issue #8 and child issues #9–#11. The first task is P1.1, the public-data manifest and verification script.
