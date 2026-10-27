@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Coverage, runtime, and Hypothesis records
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+runtime/
+.hypothesis/
+
+# Environments
+.venv/
+venv/
+
+# Builds
+_build/
+docs/_build/
+build/
+dist/
+
+# Local work and private or generated material
+tmp/
+local/
+data/private/
+outputs/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# FEMIC instance: raw public data and the TSR corpus are fetched, not tracked
+data/bc/
+data/downloads/
+data/tsr/
+reference/tsr_pdfs/
+reference/tsr_fulltext/
+metadata/tsr/*.sqlite
+metadata/tsr/tsa_candidate_facts*.json
+metadata/tsr/tsa_pdf_cache_manifest.json

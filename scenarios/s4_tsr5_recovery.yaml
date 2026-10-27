@@ -1,0 +1,13 @@
+schema_version: 1
+scenario_id: s4_tsr5_recovery
+status: planned
+description: "TSR5 recovery sensitivity"
+purpose: "Core no-harvest plus matrix max 13% of area younger than 40 years."
+land_base:
+  caribou_uwr: "2020"
+  caribou_core: true
+constraints:
+  matrix_lt_40_max_fraction: 0.13
+  mature_old_seral: true
+  caribou_lu_biodiversity: true
+  immature_deferral_years: 0

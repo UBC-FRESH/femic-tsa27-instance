@@ -1,0 +1,22 @@
+land_base_element,gross_ha,net_removed_ha,pct_of_gross,pct_of_aflb,notes
+Gross land base,758502,,,,
+Land not administered for timber supply purposes,243648,243325,32.13,,
+Non-forested and non-productive,407469,294490,53.72,,
+"Roads, pipelines, transmission lines, railways",11977,4544,1.58,,
+Analysis forest land base (AFLB),216217,,28.85,,
+Parks and protected areas (incl. Mount Revelstoke NP),26817,15596,3.54,7.13,
+Wildlife - Caribou UWR (no harvest),116820,62892,15.4,29.1,CARIBOU: legal no-harvest exclusion from LHLB; UWR u-3-005
+Wildlife - WHA (no harvest),9,3,0.0,0.0,
+Protected archaeological sites,18,0,0.0,0.0,
+Crown conservation lands,54,11,0.01,0.01,
+Total legally harvestable land base (LHLB),137726,,18.16,,
+Terrain stability / environmentally sensitive areas,,,,,TBD
+Inoperable areas,632867,,83.44,29.78,Gross overlay; not additive
+Low productivity sites,498198,,65.68,1.21,Gross overlay; not additive
+Non-merchantable timber profiles,85200,,11.23,6.31,Gross overlay; not additive
+Riparian areas,23335,,3.08,1.52,Gross overlay; not additive
+Wildlife tree retention areas,53854,,7.1,1.8,Gross overlay; not additive
+Timber harvesting land base (THLB),51454,,6.78,,Preliminary
+Future reductions,,,,,TBD
+Future roads,,,,,TBD
+Future timber harvesting land base,,,,,TBD

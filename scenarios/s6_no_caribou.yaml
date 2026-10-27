@@ -1,0 +1,13 @@
+schema_version: 1
+scenario_id: s6_no_caribou
+status: planned
+description: "No caribou constraints"
+purpose: "Upper-bound counterfactual; not a policy recommendation."
+land_base:
+  caribou_uwr: "none"
+  caribou_core: false
+constraints:
+  matrix_lt_40_max_fraction: null
+  mature_old_seral: false
+  caribou_lu_biodiversity: false
+  immature_deferral_years: 0

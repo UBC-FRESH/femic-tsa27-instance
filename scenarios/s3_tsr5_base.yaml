@@ -1,0 +1,13 @@
+schema_version: 1
+scenario_id: s3_tsr5_base
+status: planned
+description: "TSR5 base (2022)"
+purpose: "Legal UWR u-3-005 through the 2020 amendment, as described in the 2022 data package."
+land_base:
+  caribou_uwr: "2020"
+  caribou_core: false
+constraints:
+  matrix_lt_40_max_fraction: null
+  mature_old_seral: true
+  caribou_lu_biodiversity: true
+  immature_deferral_years: 0

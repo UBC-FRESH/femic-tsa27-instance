@@ -1,0 +1,13 @@
+schema_version: 1
+scenario_id: s0_tsr4_base
+status: planned
+description: "TSR4 base (2010)"
+purpose: "Last completed TSR base case; validate against the 2010 sensitivity table."
+land_base:
+  caribou_uwr: "2010"
+  caribou_core: false
+constraints:
+  matrix_lt_40_max_fraction: null
+  mature_old_seral: true
+  caribou_lu_biodiversity: true
+  immature_deferral_years: 0

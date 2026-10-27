@@ -1,0 +1,16 @@
+# Revelstoke TSA (TSA 27) case profile
+selection:
+  tsa:
+    - "27"
+  strata: []
+
+modes:
+  resume: false
+  dry_run: false
+  verbose: true
+  skip_checks: false
+  debug_rows: null
+
+run:
+  run_id: "tsa27_revelstoke_20261027"
+  log_dir: "vdyp_io/profile_logs"

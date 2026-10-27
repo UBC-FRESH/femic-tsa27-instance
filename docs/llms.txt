@@ -1,0 +1,12 @@
+# FEMIC TSA 27 Revelstoke Instance
+
+> Agent-facing index for the FEMIC TSA 27 Revelstoke Instance. Read the linked pages before you change the project.
+
+## Start here
+
+- [Home](index.html): the documentation home for the project.
+- [Overview](overview.html): the question, the four caribou policy layers, and the evidence base.
+- [Data provenance](data-provenance.html): public sources, storage, and tracked artifacts.
+- [Model design](model-design.html): land base, caribou layers, scenarios, and verification.
+- [Limitations](limitations.html): what is unpublished, uncertain, or not redistributed.
+- [API reference](api/index.html): every public function, with its parameters, types, and return values.

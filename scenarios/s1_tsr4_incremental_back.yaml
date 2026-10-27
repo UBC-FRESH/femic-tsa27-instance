@@ -1,0 +1,13 @@
+schema_version: 1
+scenario_id: s1_tsr4_incremental_back
+status: planned
+description: "TSR4 + incremental reserves back"
+purpose: "Isolate the incremental GAR reserve effect (+8.4% short/mid, +2.2% long-term)."
+land_base:
+  caribou_uwr: "2010"
+  caribou_core: false
+constraints:
+  matrix_lt_40_max_fraction: null
+  mature_old_seral: true
+  caribou_lu_biodiversity: true
+  immature_deferral_years: 0

@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this workflow template, please cite the repository."
+title: "FEMIC TSA 27 Revelstoke Instance"
+abstract: "Public FEMIC deployment instance and WS4 model case for the Revelstoke TSA (TSA 27)."
+authors:
+  - name: "UBC FRESH Lab"
+repository-code: "https://github.com/UBC-FRESH/femic-tsa27-instance"
+url: "https://ubc-fresh.github.io/femic-tsa27-instance/"
+license: "MIT"
+version: "0.1.0"
+date-released: "2026-10-14"

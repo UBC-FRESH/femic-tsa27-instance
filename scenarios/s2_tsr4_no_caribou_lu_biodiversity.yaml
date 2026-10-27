@@ -1,0 +1,13 @@
+schema_version: 1
+scenario_id: s2_tsr4_no_caribou_lu_biodiversity
+status: planned
+description: "TSR4 no mature biodiversity in caribou LUs"
+purpose: "Isolate the mature/old biodiversity interaction in caribou LUs (+4.0% short/mid, +2.5% long-term)."
+land_base:
+  caribou_uwr: "2010"
+  caribou_core: false
+constraints:
+  matrix_lt_40_max_fraction: null
+  mature_old_seral: true
+  caribou_lu_biodiversity: false
+  immature_deferral_years: 0

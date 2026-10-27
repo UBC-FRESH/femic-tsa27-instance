@@ -1,0 +1,13 @@
+schema_version: 1
+scenario_id: s5_tsr3_style
+status: planned
+description: "TSR3-style historical"
+purpose: "Caribou as LU/BEC seral constraints plus the 80-year immature-habitat deferral."
+land_base:
+  caribou_uwr: "hlp_zone"
+  caribou_core: false
+constraints:
+  matrix_lt_40_max_fraction: null
+  mature_old_seral: true
+  caribou_lu_biodiversity: true
+  immature_deferral_years: 80
