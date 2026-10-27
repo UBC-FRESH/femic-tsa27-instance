@@ -13,7 +13,7 @@ parent issue exists and the maintainer approves it.
 | Phase | Parent issue | Branch | Status |
 | --- | --- | --- | --- |
 | P0 Bootstrap | #1 | `feature/p0-bootstrap` | complete |
-| P1 Data materialization | #8 | `feature/p1-data` | active |
+| P1 Data materialization | #8 | `feature/p1-data` | pr-open |
 | P2 FEMIC compile | TBD | `feature/p2-compile` | planned |
 | P3 WS4 dataset | TBD | `feature/p3-ws4-build` | planned |
 | P4 Caribou scenarios | TBD | `feature/p4-caribou` | planned |
@@ -67,7 +67,7 @@ Acceptance criteria:
 
 Parent issue: #8
 Branch: `feature/p1-data`
-Status: active
+Status: pr-open
 
 Goal: materialize and reconcile the public data needed for the TSA 27 model.
 
