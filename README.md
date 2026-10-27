@@ -17,7 +17,7 @@ The TSR evidence and the answers are in [`reports/tsa27-tsr-corpus-analysis.md`]
 
 ## Status
 
-Phase P0 (bootstrap) is planned. `ROADMAP.md` is the plan of record; the GitHub issues carry the live status. The FEMIC instance scaffold and the TSA 27 run profile are in place; the public data and the WS4 dataset are not yet built.
+Phase P0 (bootstrap) is in review: pull request #7 is queued. `ROADMAP.md` is the plan of record; the GitHub issues carry the live status. The FEMIC instance scaffold, the TSR evidence base, and the model-building plan are in place; the public data and the WS4 dataset are not yet built.
 
 ## Evidence base
 
