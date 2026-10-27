@@ -1,0 +1,74 @@
+entries:
+  bec_v12:
+    detail: to_fetch; see fetch_command or note
+    file_count: 0
+    sha256: ''
+    size_bytes: 0
+    status: pending
+  caribou_core_matrix:
+    detail: to_fetch; see fetch_command or note
+    file_count: 0
+    sha256: ''
+    size_bytes: 0
+    status: pending
+  caribou_uwr:
+    detail: local:data/downloads/bc/uwr.geojson
+    file_count: 1
+    sha256: 3b3eeba6f9fb7841a73f6cde5ff6e1d342488b762948cdadb044bd3f58e47e62
+    size_bytes: 81253500
+    status: present
+  cutblocks:
+    detail: local:data/downloads/bc/cutblocks.geojson
+    file_count: 1
+    sha256: 0b78162774203bb3a56d9181a24d3b0071f41ab345383a05bf95cd0afa37fb29
+    size_bytes: 33457127
+    status: present
+  landscape_units:
+    detail: local:data/downloads/bc/lu.geojson
+    file_count: 1
+    sha256: 1ea111d4509020160c613e1ab6b44a1b8408ed22067cc80d50272c388f8f539a
+    size_bytes: 12280059
+    status: present
+  ogma_mogma:
+    detail: local:data/downloads/bc/ogma.geojson
+    file_count: 1
+    sha256: f8f063cb8ba8581a6e1701c2d10c4ed8b5dafcdc263fbf7d3cae64dc5d260198
+    size_bytes: 2914646
+    status: present
+  roads:
+    detail: local:data/downloads/bc/roads.geojson
+    file_count: 1
+    sha256: 32d23147ddf253a8486ad90317084896734a0fcb02d201ddff69b01cd2a613cb
+    size_bytes: 28072656
+    status: present
+  site_productivity:
+    detail: mirror:bc/siteprod/Site_Prod_BC.gdb
+    file_count: 509
+    sha256: 7af4bd1ed68220202bb8744b339ff4517b7c0422e801ad3b8d645a7923f76092
+    size_bytes: 2491176437
+    status: present
+  tsa_boundary:
+    detail: mirror:bc/tsa/FADM_TSA.gdb
+    file_count: 44
+    sha256: d55f4fb79051896a5a592911d2e6c349118f2e10e389fc6c9f6fdcd032bc7f1d
+    size_bytes: 50708814
+    status: present
+  tsr_corpus:
+    detail: 19 PDFs
+    file_count: 19
+    sha256: ''
+    size_bytes: 0
+    status: present
+  vri_2025_lyr:
+    detail: mirror:bc/vri/2025/VEG_COMP_LYR_R1_POLY_2025.gdb
+    file_count: 45
+    sha256: 8f00fad96fa56ee30cdf055ae12cbf921987d2a07d3729b7b371a3bd464eaf44
+    size_bytes: 6472680835
+    status: present
+  vri_2025_vdyp:
+    detail: mirror:bc/vri/2025/VEG_COMP_VDYP7_INPUT_POLY_AND_LAYER_2025.gdb
+    file_count: 47
+    sha256: a5a02ac644bb411fa8799f7f4c96e77ae2d7fb11dcca9e49b681f4dce2861587
+    size_bytes: 1763666458
+    status: present
+generated_utc: '2026-10-27T20:26:39.959029+00:00'

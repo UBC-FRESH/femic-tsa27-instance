@@ -16,3 +16,16 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - Verification: `python scripts/dashboard.py` is green (lint, format, types, tests at 100% coverage, validator, docs). `femic prep validate-case --run-config config/run_profile.tsa27.yaml` passes with the public-data mirror.
 
 - Opened pull request #7 for P0 review; the dashboard is green and every child issue has evidence. P0 is `pr-open`.
+
+### P1 data materialization — 2026-10-27
+
+- P0 closed: pull request #7 merged as `b28b9e1`; the merge tree equals the approved head tree. Child issues #2–#6 are closed.
+- Activated P1 with parent issue #8 and child issues #9–#11. The first task is P1.1, the public-data manifest and verification script.
+
+- P1.1: added `metadata/data_manifest.yaml`, the verification script and tests, and `metadata/data_manifest.lock.yaml`. Mirror checks: 5 present (VRI 2025 layer, VRI VDYP input, TSA boundary, site productivity, 19-document TSR corpus), 7 pending `to_fetch`. Dashboard green (182 tests, 100% coverage).
+
+- P1.2: built the provisional TSA 27 land base from VRI 2025, TSA 27, landscape units, UWR u-3-005, legal OGMAs, and cutblocks. Direct UWR clip is 116,759 ha vs 116,820 ha in TSR5 Table 14 (0.05% difference). The binary VRI flag overstates the UWR edge (247,313 ha); this is documented and deferred to fragment splitting in P1.3/P2. Legal OGMA has no polygons in TSA 27; non-legal OGMAs, BEC v12, core/matrix, and the historical HLP zone remain `to_fetch`.
+
+- P1.3: reconciled the provisional land base against TSR4 Table 3 and TSR5 Table 14. Gross 758,443 ha vs 758,502 (−0.008%); direct UWR u-3-005 116,759 ha vs 116,820 (−0.05%). AFLB and THLB are not comparable yet: the provisional forested class is 419,663 ha and the THLB candidate 246,451 ha, pending the P2 netdown sequence. Report: `reports/tsa27-land-base-reconciliation.md`.
+
+- P1 is `pr-open`: all three tasks are complete; the phase pull request is queued for review.

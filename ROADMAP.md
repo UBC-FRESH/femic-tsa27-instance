@@ -12,8 +12,8 @@ parent issue exists and the maintainer approves it.
 
 | Phase | Parent issue | Branch | Status |
 | --- | --- | --- | --- |
-| P0 Bootstrap | #1 | `feature/p0-bootstrap` | pr-open |
-| P1 Data materialization | TBD | `feature/p1-data` | planned |
+| P0 Bootstrap | #1 | `feature/p0-bootstrap` | complete |
+| P1 Data materialization | #8 | `feature/p1-data` | pr-open |
 | P2 FEMIC compile | TBD | `feature/p2-compile` | planned |
 | P3 WS4 dataset | TBD | `feature/p3-ws4-build` | planned |
 | P4 Caribou scenarios | TBD | `feature/p4-caribou` | planned |
@@ -45,7 +45,7 @@ parent issue exists and the maintainer approves it.
 
 Parent issue: #1
 Branch: `feature/p0-bootstrap`
-Status: pr-open
+Status: complete
 
 Goal: make the public FEMIC + WS4 instance repository reviewable, with the TSR evidence,
 the model-building plan, and a green dashboard.
@@ -65,15 +65,15 @@ Acceptance criteria:
 
 ## Phase 1: Data materialization
 
-Parent issue: TBD
+Parent issue: #8
 Branch: `feature/p1-data`
-Status: planned
+Status: pr-open
 
 Goal: materialize and reconcile the public data needed for the TSA 27 model.
 
-- [ ] P1.1 Fetch and verify the public base datasets
-- [ ] P1.2 Build the TSA 27 land-base layer and caribou zone flags
-- [ ] P1.3 Reconcile land-base totals with the TSR4 and 2022 tables
+- [x] P1.1 Fetch and verify the public base datasets (#9)
+- [x] P1.2 Build the TSA 27 land-base layer and caribou zone flags (#10)
+- [x] P1.3 Reconcile land-base totals with the TSR4 and 2022 tables (#11)
 
 Acceptance criteria:
 
