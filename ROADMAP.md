@@ -12,7 +12,7 @@ parent issue exists and the maintainer approves it.
 
 | Phase | Parent issue | Branch | Status |
 | --- | --- | --- | --- |
-| P0 Bootstrap | #1 | `feature/p0-bootstrap` | active |
+| P0 Bootstrap | #1 | `feature/p0-bootstrap` | pr-open |
 | P1 Data materialization | TBD | `feature/p1-data` | planned |
 | P2 FEMIC compile | TBD | `feature/p2-compile` | planned |
 | P3 WS4 dataset | TBD | `feature/p3-ws4-build` | planned |
@@ -45,7 +45,7 @@ parent issue exists and the maintainer approves it.
 
 Parent issue: #1
 Branch: `feature/p0-bootstrap`
-Status: active
+Status: pr-open
 
 Goal: make the public FEMIC + WS4 instance repository reviewable, with the TSR evidence,
 the model-building plan, and a green dashboard.
@@ -54,7 +54,7 @@ the model-building plan, and a green dashboard.
 - [x] P0.2 Add the TSR corpus analysis report and curated evidence tables (#3)
 - [x] P0.3 Add the model-building plan and scenario schema (#4)
 - [x] P0.4 Add TSR and public-data fetch scripts plus provenance docs (#5)
-- [ ] P0.5 Pass the dashboard and open the P0 pull request (#6)
+- [x] P0.5 Pass the dashboard and open the P0 pull request (#6)
 
 Acceptance criteria:
 

@@ -14,3 +14,5 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - Added `scripts/fetch_tsr_corpus.py` with unit tests and the raw-data ignore rules; raw TSR PDFs and provincial data remain out of git.
 - Added the data provenance and limitations docs and the TSA 27 run profile/TIPSY scaffold.
 - Verification: `python scripts/dashboard.py` is green (lint, format, types, tests at 100% coverage, validator, docs). `femic prep validate-case --run-config config/run_profile.tsa27.yaml` passes with the public-data mirror.
+
+- Opened pull request #7 for P0 review; the dashboard is green and every child issue has evidence. P0 is `pr-open`.
