@@ -90,9 +90,9 @@ Status: active
 Goal: compile the TSA 27 land base, AUs, and yield curves with FEMIC.
 
 - [x] P2.1 Build analysis units and strata (#14)
-- [ ] P2.2 Run VDYP7 natural and TIPSY managed yield curves (#15)
-- [ ] P2.3 Compile the THLB checkpoint and model-input bundle (#16)
-- [ ] P2.4 QA the compiled inputs against TSR evidence (#17)
+- [x] P2.2 Run VDYP7 natural and TIPSY managed yield curves (#15)
+- [x] P2.3 Compile the THLB checkpoint and model-input bundle (#16)
+- [x] P2.4 QA the compiled inputs against TSR evidence (#17)
 
 Acceptance criteria:
 

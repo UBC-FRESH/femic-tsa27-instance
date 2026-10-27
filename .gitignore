@@ -48,3 +48,15 @@ metadata/tsr/tsa_pdf_cache_manifest.json
 data/land_base/
 
 data/analysis_units/
+
+# FEMIC P2 generated data (tracked summaries are under metadata/ and reports/)
+data/vri_*
+data/vdyp_*
+data/tipsy_*
+data/03_input-tsa27.csv
+data/04_*
+data/shp/
+data/tsa_boundaries.feather
+plots/
+tipsy_io/
+vdyp_io/
