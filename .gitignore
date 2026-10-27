@@ -63,3 +63,6 @@ vdyp_io/
 
 data/ws4/
 build/
+
+output/patchworks/
+runs/

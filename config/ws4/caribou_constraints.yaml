@@ -1,0 +1,28 @@
+schema_version: 1
+case: tsa27
+uwr:
+  source: UWR u-3-005 (no-harvest)
+  rule: no_harvest
+  enforcement: schedule_filter
+  flag: caribou_uwr
+  note: Blocks whose fragment has caribou_uwr = 1 are removed from the harvest schedule.
+core:
+  source: provincial caribou core habitat
+  rule: no_harvest
+  enforcement: pending_layer
+  status: to_fetch
+matrix:
+  source: provincial caribou matrix habitat
+  rule: max_fraction_lt_40_years
+  threshold: 0.13
+  enforcement: mapped_not_enforced
+  status: to_fetch
+seral:
+  accounts:
+    - feature.Area.og1.*
+    - feature.Area.og2.*
+  note: The Patchworks export already carries og1/og2 age-class features; map them to the TSR LU/BEC targets in P4.
+historical:
+  hlp_zone: to_fetch
+  immature_deferral_years: 80
+  enforcement: mapped_not_enforced
