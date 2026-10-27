@@ -29,3 +29,8 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - P1.3: reconciled the provisional land base against TSR4 Table 3 and TSR5 Table 14. Gross 758,443 ha vs 758,502 (−0.008%); direct UWR u-3-005 116,759 ha vs 116,820 (−0.05%). AFLB and THLB are not comparable yet: the provisional forested class is 419,663 ha and the THLB candidate 246,451 ha, pending the P2 netdown sequence. Report: `reports/tsa27-land-base-reconciliation.md`.
 
 - P1 is `pr-open`: all three tasks are complete; the phase pull request is queued for review.
+
+### P2 FEMIC compile — 2026-10-27
+
+- P1 closed: pull request #12 merged as `3091906`; the merge tree equals the approved head tree. Child issues #9–#11 are closed.
+- Activated P2 with parent issue #13 and child issues #14–#17. The first task is P2.1, the analysis-unit and strata build.
