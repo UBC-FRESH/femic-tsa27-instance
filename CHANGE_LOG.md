@@ -41,3 +41,8 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - P2.4: QA report at `reports/tsa27-model-input-qa.md`. The THLB is 21,194 ha above TSR4 and 27,648 ha above TSR5 because the legacy compile did not apply the full netdown sequence; this is explained and deferred to P3. Caribou flags will be joined in P3.
 
 - P2 is `pr-open`: all four tasks are complete; the phase pull request is queued for review.
+
+### P3 WS4 dataset — 2026-10-27
+
+- P2 closed: pull request #18 merged as `9e60a5a`; the merge tree equals the approved head tree. Child issues #14–#17 are closed.
+- Activated P3 with parent issue #19 and child issues #20–#23. The first task is P3.1, the WS4 fragment layer and caribou attributes.
