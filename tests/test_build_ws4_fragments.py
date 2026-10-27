@@ -150,14 +150,14 @@ def test_main_check_fails(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> No
     broken = fragments.copy()
     broken["au"] = None
     monkeypatch.setattr(build_ws4_fragments, "load_fragments", lambda path: fragments)
-    monkeypatch.setattr(build_ws4_fragments, "build_fragments", lambda f, u, l: broken)
+    monkeypatch.setattr(build_ws4_fragments, "build_fragments", lambda f, u, lu_layer: broken)
     monkeypatch.setattr(
         build_ws4_fragments,
         "summarize_fragments",
         lambda f: pd.DataFrame([{"class": "x", "area_ha": 0.0, "fragments": 0}]),
     )
     monkeypatch.setattr(
-        build_ws4_fragments.gpd,
+        gpd,
         "read_file",
         lambda path: gpd.GeoDataFrame(geometry=[], crs=3005),
     )
