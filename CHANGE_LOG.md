@@ -34,3 +34,5 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 
 - P1 closed: pull request #12 merged as `3091906`; the merge tree equals the approved head tree. Child issues #9–#11 are closed.
 - Activated P2 with parent issue #13 and child issues #14–#17. The first task is P2.1, the analysis-unit and strata build.
+
+- P2.1: built 273 AU/stratum classes from the Revelstoke VRI project (35,213 polygons; 468,114 ha). Non-forest 210,530 ha; forested AUs 257,583 ha; THLB candidate 143,428 ha; UNASSIGNED 32.6 ha. TFL/update projects excluded to avoid overlapping double counts. Dashboard green (228 tests, 100% coverage).
