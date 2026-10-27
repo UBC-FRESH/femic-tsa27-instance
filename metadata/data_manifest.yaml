@@ -43,22 +43,25 @@ entries:
     source: BCGW WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY
     version: "12"
     status: to_fetch
-    required: true
+    required: false
     fetch_command: femic data bcdc-resolve WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY
+    note: The provisional build uses the VRI BEC_ZONE_CODE/BEC_SUBZONE/BEC_VARIANT attributes. Fetch the polygon layer for the final cross-check.
   - id: landscape_units
     description: Landscape unit boundaries for LU/BEC seral accounting
-    source: BCGW WHSE_FOREST_VEGETATION.FADM_LANDSCAPE_UNIT_SV
+    source: BCGW WHSE_LAND_USE_PLANNING.RMP_LANDSCAPE_UNIT_SVW
     version: "current"
-    status: to_fetch
+    status: available
     required: true
-    fetch_command: femic data bcdc-resolve WHSE_FOREST_VEGETATION.FADM_LANDSCAPE_UNIT_SV
+    local_path: data/downloads/bc/lu.geojson
+    check: path
   - id: caribou_uwr
     description: Ungulate winter range, UWR u-3-005 (mountain caribou)
     source: BCGW WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP
     version: "2020 amendment"
-    status: to_fetch
+    status: available
     required: true
-    fetch_command: femic data bcdc-resolve WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP
+    local_path: data/downloads/bc/uwr.geojson
+    check: path
   - id: caribou_core_matrix
     description: Provincial caribou recovery core and matrix habitat
     source: BC Provincial Caribou Recovery Program
@@ -68,25 +71,30 @@ entries:
     note: Request the current core/matrix layer from the provincial caribou recovery team; record the delivery date and version.
   - id: ogma_mogma
     description: Spatial old-growth and mature-plus-old management areas
-    source: BCGW / approved Forest Stewardship Plans
+    source: BCGW WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL_CURRENT_SVW plus FSP layers
     version: "current"
-    status: to_fetch
+    status: available
     required: true
-    note: Record whether the layer is legal or FSP-adopted.
+    local_path: data/downloads/bc/ogma.geojson
+    check: path
+    note: Legal OGMAs only; the non-legal MOGMA/FSP layers are still to fetch.
   - id: roads
     description: Road and transportation network for harvest priority
-    source: BCGW road and transportation layers
+    source: BCGW WHSE_FOREST_TENURE.FTEN_ROAD_SEGMENT_LINES_SVW
     version: "current"
-    status: to_fetch
+    status: available
     required: true
-    fetch_command: femic data bcdc-resolve "roads"
+    local_path: data/downloads/bc/roads.geojson
+    check: path
   - id: cutblocks
     description: Consolidated cutblocks and depletion
     source: BCGW WHSE_FOREST_VEGETATION.VEG_CONSOLIDATED_CUT_BLOCKS_SP
     version: "current"
-    status: to_fetch
+    status: available
     required: true
-    fetch_command: femic data bcdc-resolve WHSE_FOREST_VEGETATION.VEG_CONSOLIDATED_CUT_BLOCKS_SP
+    local_path: data/downloads/bc/cutblocks.geojson
+    check: path
+    note: The WFS response contains 10,000 features; confirm whether the layer was truncated and paginate if needed.
   - id: tsr_corpus
     description: TSA 27 TSR document corpus (1994–2022)
     source: BC TSR FTP catalogue and www2 2022 data package

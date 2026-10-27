@@ -12,35 +12,35 @@ entries:
     size_bytes: 0
     status: pending
   caribou_uwr:
-    detail: to_fetch; see fetch_command or note
-    file_count: 0
-    sha256: ''
-    size_bytes: 0
-    status: pending
+    detail: local:data/downloads/bc/uwr.geojson
+    file_count: 1
+    sha256: 3b3eeba6f9fb7841a73f6cde5ff6e1d342488b762948cdadb044bd3f58e47e62
+    size_bytes: 81253500
+    status: present
   cutblocks:
-    detail: to_fetch; see fetch_command or note
-    file_count: 0
-    sha256: ''
-    size_bytes: 0
-    status: pending
+    detail: local:data/downloads/bc/cutblocks.geojson
+    file_count: 1
+    sha256: 0b78162774203bb3a56d9181a24d3b0071f41ab345383a05bf95cd0afa37fb29
+    size_bytes: 33457127
+    status: present
   landscape_units:
-    detail: to_fetch; see fetch_command or note
-    file_count: 0
-    sha256: ''
-    size_bytes: 0
-    status: pending
+    detail: local:data/downloads/bc/lu.geojson
+    file_count: 1
+    sha256: 1ea111d4509020160c613e1ab6b44a1b8408ed22067cc80d50272c388f8f539a
+    size_bytes: 12280059
+    status: present
   ogma_mogma:
-    detail: to_fetch; see fetch_command or note
-    file_count: 0
-    sha256: ''
-    size_bytes: 0
-    status: pending
+    detail: local:data/downloads/bc/ogma.geojson
+    file_count: 1
+    sha256: f8f063cb8ba8581a6e1701c2d10c4ed8b5dafcdc263fbf7d3cae64dc5d260198
+    size_bytes: 2914646
+    status: present
   roads:
-    detail: to_fetch; see fetch_command or note
-    file_count: 0
-    sha256: ''
-    size_bytes: 0
-    status: pending
+    detail: local:data/downloads/bc/roads.geojson
+    file_count: 1
+    sha256: 32d23147ddf253a8486ad90317084896734a0fcb02d201ddff69b01cd2a613cb
+    size_bytes: 28072656
+    status: present
   site_productivity:
     detail: mirror:bc/siteprod/Site_Prod_BC.gdb
     file_count: 509
@@ -71,4 +71,4 @@ entries:
     sha256: a5a02ac644bb411fa8799f7f4c96e77ae2d7fb11dcca9e49b681f4dce2861587
     size_bytes: 1763666458
     status: present
-generated_utc: '2026-10-27T19:35:34.824069+00:00'
+generated_utc: '2026-10-27T20:26:39.959029+00:00'

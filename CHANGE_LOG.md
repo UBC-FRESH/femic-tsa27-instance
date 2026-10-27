@@ -23,3 +23,5 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - Activated P1 with parent issue #8 and child issues #9–#11. The first task is P1.1, the public-data manifest and verification script.
 
 - P1.1: added `metadata/data_manifest.yaml`, the verification script and tests, and `metadata/data_manifest.lock.yaml`. Mirror checks: 5 present (VRI 2025 layer, VRI VDYP input, TSA boundary, site productivity, 19-document TSR corpus), 7 pending `to_fetch`. Dashboard green (182 tests, 100% coverage).
+
+- P1.2: built the provisional TSA 27 land base from VRI 2025, TSA 27, landscape units, UWR u-3-005, legal OGMAs, and cutblocks. Direct UWR clip is 116,759 ha vs 116,820 ha in TSR5 Table 14 (0.05% difference). The binary VRI flag overstates the UWR edge (247,313 ha); this is documented and deferred to fragment splitting in P1.3/P2. Legal OGMA has no polygons in TSA 27; non-legal OGMAs, BEC v12, core/matrix, and the historical HLP zone remain `to_fetch`.

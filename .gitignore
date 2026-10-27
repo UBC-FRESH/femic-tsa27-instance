@@ -44,3 +44,5 @@ reference/tsr_fulltext/
 metadata/tsr/*.sqlite
 metadata/tsr/tsa_candidate_facts*.json
 metadata/tsr/tsa_pdf_cache_manifest.json
+
+data/land_base/
