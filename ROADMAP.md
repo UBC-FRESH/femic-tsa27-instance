@@ -14,7 +14,7 @@ parent issue exists and the maintainer approves it.
 | --- | --- | --- | --- |
 | P0 Bootstrap | #1 | `feature/p0-bootstrap` | complete |
 | P1 Data materialization | #8 | `feature/p1-data` | complete |
-| P2 FEMIC compile | #13 | `feature/p2-compile` | active |
+| P2 FEMIC compile | #13 | `feature/p2-compile` | pr-open |
 | P3 WS4 dataset | TBD | `feature/p3-ws4-build` | planned |
 | P4 Caribou scenarios | TBD | `feature/p4-caribou` | planned |
 | P5 Publish and release | TBD | `feature/p5-release` | planned |
@@ -85,7 +85,7 @@ Acceptance criteria:
 
 Parent issue: #13
 Branch: `feature/p2-compile`
-Status: active
+Status: pr-open
 
 Goal: compile the TSA 27 land base, AUs, and yield curves with FEMIC.
 

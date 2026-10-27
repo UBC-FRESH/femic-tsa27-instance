@@ -39,3 +39,5 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 
 - P2.2/P2.3: ran VDYP7 natural curves and TIPSY/BTC managed curves. 18 model AUs, 1,008 curves, 6,939 curve points, 0 TIPSY error rows. The model-input bundle is in `data/model_input_bundle/`; the stand checkpoint is `data/vri_vclr1p_checkpoint8.feather` (37,463 stands; 6,439 THLB; 79,102 ha THLB).
 - P2.4: QA report at `reports/tsa27-model-input-qa.md`. The THLB is 21,194 ha above TSR4 and 27,648 ha above TSR5 because the legacy compile did not apply the full netdown sequence; this is explained and deferred to P3. Caribou flags will be joined in P3.
+
+- P2 is `pr-open`: all four tasks are complete; the phase pull request is queued for review.
