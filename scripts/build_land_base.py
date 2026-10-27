@@ -152,13 +152,38 @@ def build_land_base(
     return joined.sort_index().reset_index(drop=True)
 
 
-def summarize(layer: gpd.GeoDataFrame) -> pd.DataFrame:
+def direct_uwr_area(tsa: gpd.GeoDataFrame, uwr: gpd.GeoDataFrame) -> float:
+    """Return the direct UWR u-3-005 no-harvest area clipped to the TSA.
+
+    Parameters
+    ----------
+    tsa : geopandas.GeoDataFrame
+        TSA polygons in EPSG:3005.
+    uwr : geopandas.GeoDataFrame
+        Ungulate winter range polygons.
+
+    Returns
+    -------
+    float
+        Union area in hectares, or 0 when no caribou polygons intersect.
+    """
+    caribou = uwr[caribou_uwr_mask(uwr)].to_crs(3005)
+    clipped = gpd.clip(caribou, tsa.union_all())
+    if clipped.empty:
+        return 0.0
+    return float(clipped.union_all().area / 10_000)
+
+
+def summarize(layer: gpd.GeoDataFrame, direct_uwr_ha: float | None = None) -> pd.DataFrame:
     """Summarize the provisional land-base areas.
 
     Parameters
     ----------
     layer : geopandas.GeoDataFrame
         The built land-base layer in EPSG:3005.
+    direct_uwr_ha : float or None, optional
+        Direct UWR u-3-005 clip area in hectares. When provided, a
+        ``caribou_uwr_direct`` row is appended.
 
     Returns
     -------
@@ -193,6 +218,15 @@ def summarize(layer: gpd.GeoDataFrame) -> pd.DataFrame:
                 else 0.0,
                 "polygons": int(mask.sum()),
                 "notes": note,
+            }
+        )
+    if direct_uwr_ha is not None:
+        rows.append(
+            {
+                "class": "caribou_uwr_direct",
+                "area_ha": float(direct_uwr_ha),
+                "polygons": 0,
+                "notes": "direct UWR u-3-005 no-harvest clip; use this for area accounting",
             }
         )
     return pd.DataFrame(rows)
@@ -255,7 +289,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     layer = build_land_base(vri, tsa, lu, uwr, ogma, cutblocks)
     args.out.parent.mkdir(parents=True, exist_ok=True)
     layer.to_file(args.out, driver="GPKG")
-    summary = summarize(layer)
+    summary = summarize(layer, direct_uwr_ha=direct_uwr_area(tsa, uwr))
     args.summary.parent.mkdir(parents=True, exist_ok=True)
     summary.to_csv(args.summary, index=False)
     print(summary.to_string(index=False))

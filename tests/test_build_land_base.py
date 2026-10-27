@@ -91,6 +91,17 @@ def test_build_land_base_flags() -> None:
     assert set(layer["LANDSCAPE_UNIT_NAME"].tolist()) == {"Test LU"}
 
 
+def test_direct_uwr_area_empty() -> None:
+    """A UWR that does not intersect the TSA returns zero."""
+    tsa, _, _, _, _, _ = make_inputs()
+    uwr = gpd.GeoDataFrame(
+        {"UWR_NUMBER": ["u-3-005"], "TIMBER_HARVEST_CODE": ["NO HARVEST ZONE"]},
+        geometry=[box(100, 100, 110, 110)],
+        crs=3005,
+    )
+    assert build_land_base.direct_uwr_area(tsa, uwr) == 0.0
+
+
 def test_summarize() -> None:
     """The summary reports gross area and each flag."""
     tsa, vri, lu, uwr, ogma, cutblocks = make_inputs()
