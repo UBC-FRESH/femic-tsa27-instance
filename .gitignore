@@ -60,3 +60,6 @@ data/tsa_boundaries.feather
 plots/
 tipsy_io/
 vdyp_io/
+
+data/ws4/
+build/
