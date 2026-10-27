@@ -29,3 +29,15 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - P1.3: reconciled the provisional land base against TSR4 Table 3 and TSR5 Table 14. Gross 758,443 ha vs 758,502 (−0.008%); direct UWR u-3-005 116,759 ha vs 116,820 (−0.05%). AFLB and THLB are not comparable yet: the provisional forested class is 419,663 ha and the THLB candidate 246,451 ha, pending the P2 netdown sequence. Report: `reports/tsa27-land-base-reconciliation.md`.
 
 - P1 is `pr-open`: all three tasks are complete; the phase pull request is queued for review.
+
+### P2 FEMIC compile — 2026-10-27
+
+- P1 closed: pull request #12 merged as `3091906`; the merge tree equals the approved head tree. Child issues #9–#11 are closed.
+- Activated P2 with parent issue #13 and child issues #14–#17. The first task is P2.1, the analysis-unit and strata build.
+
+- P2.1: built 273 AU/stratum classes from the Revelstoke VRI project (35,213 polygons; 468,114 ha). Non-forest 210,530 ha; forested AUs 257,583 ha; THLB candidate 143,428 ha; UNASSIGNED 32.6 ha. TFL/update projects excluded to avoid overlapping double counts. Dashboard green (228 tests, 100% coverage).
+
+- P2.2/P2.3: ran VDYP7 natural curves and TIPSY/BTC managed curves. 18 model AUs, 1,008 curves, 6,939 curve points, 0 TIPSY error rows. The model-input bundle is in `data/model_input_bundle/`; the stand checkpoint is `data/vri_vclr1p_checkpoint8.feather` (37,463 stands; 6,439 THLB; 79,102 ha THLB).
+- P2.4: QA report at `reports/tsa27-model-input-qa.md`. The THLB is 21,194 ha above TSR4 and 27,648 ha above TSR5 because the legacy compile did not apply the full netdown sequence; this is explained and deferred to P3. Caribou flags will be joined in P3.
+
+- P2 is `pr-open`: all four tasks are complete; the phase pull request is queued for review.

@@ -1,0 +1,30 @@
+schema_version: 1
+generated_utc: '2026-10-27T23:25:00Z'
+case: tsa27
+source:
+  run_config: config/run_profile.tsa27.yaml
+  femic_run_id: tsa27_p2_compile_final
+  btc_run_id: tsa27_btc5_tsa27
+  vdyp_executable: VDYP7/VDYP7/VDYP7Console.exe (wine)
+  btc_executable: external TIPSYbtc.exe via wine + Xvfb wrapper
+checkpoint:
+  path: data/vri_vclr1p_checkpoint8.feather
+  stands: 37463
+  thlb_stands: 6439
+  thlb_area_ha: 79101.75504091542
+  analysis_units: 18
+bundle:
+  path: data/model_input_bundle
+  files:
+  - name: au_table.csv
+    size_bytes: 1546
+    sha256: ae84cb2f1c3ad7ea8050f3c08806f7c0ea09164b9a601273f6ccefafe83cf594
+  - name: curve_points_table.csv
+    size_bytes: 157969
+    sha256: f4548fc264401eb46efa2a2c37b796593d3c8dfd9385a2929e1a4769247d0b85
+  - name: curve_table.csv
+    size_bytes: 39555
+    sha256: 88f3d23bdbb936983a402e9d4251e5df2f6be0d309921d4914d260fe9c2816fc
+  curves: 1008
+  curve_points: 6939
+  tipsy_error_rows: 0

@@ -24,6 +24,10 @@ metadata:
   created_utc: "2026-10-27T00:00:00Z"
   notes: "Placeholder TIPSY rules. Replace with TSR4/current FSP evidence before production use."
 
+species_code_overrides:
+  SE: SW
+  SX: SW
+
 defaults:
   e:
     OAF2: 0.95
@@ -64,6 +68,24 @@ rules:
         PCT_1: 100
         Util_DBH_cm: 17.5
     notes: "Replace with production rules from local TSR/FSP evidence."
+  - id: "tsa27_default_all_species"
+    when: {}
+    assign:
+      e:
+        Regen_Delay: 2
+        Density: 1400
+        SPP_1: "$leading_species_tipsy"
+        PCT_1: 100
+        Util_DBH_cm: 17.5
+      f:
+        Regen_Delay: 1
+        Density: 1400
+        SPP_1: "$leading_species_tipsy"
+        PCT_1: 100
+        SI_c1: 1.0
+        SI_c2: 0.0
+        Util_DBH_cm: 17.5
+    notes: "Provisional catch-all for TSA 27; replace with species/BEC-specific TSR/FSP rules when available."
 
 required_fields:
   - AU
