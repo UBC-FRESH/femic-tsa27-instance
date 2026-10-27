@@ -51,3 +51,5 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - P3.2: exported Patchworks XML/fragments and compiled `build/compiled` (40,660 fragments; 4,746 tracks; 54,510 features; 94 accounts).
 - P3.3: applied the UWR u-3-005 no-harvest schedule filter (1,940 of 8,107 rows excluded); matrix 13% and historical deferral mapped but not enforced.
 - P3.4: ran the capacity test (24.2M m³ at offset 0) and the UWR-constrained run (13.66M m³, 57,941 ha treated). Reports: `reports/tsa27-ws4-dataset.md`, `reports/tsa27-base-run.md`.
+
+- P3 is `pr-open`: all four tasks are complete; the phase pull request is queued for review.
