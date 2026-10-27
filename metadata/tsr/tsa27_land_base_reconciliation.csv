@@ -1,0 +1,9 @@
+metric,ws4_class,tsr_element,ws4_ha,tsr_ha,difference_ha,difference_pct,comparable,within_tolerance,explanation
+gross_land_base,gross_clip,Gross land base,758443.6791994084,758502.0,-58.321,-0.0077,yes,yes,TSA 27 boundary clip versus the 2022 gross land base; 59 ha edge/rounding.
+caribou_uwr_gross,caribou_uwr_direct,Wildlife - Caribou UWR (no harvest),116758.80162178102,116820.0,-61.198,-0.0524,yes,yes,Direct UWR u-3-005 no-harvest clip; 61 ha boundary/geometry difference.
+caribou_uwr_net,,Wildlife - Caribou UWR (no harvest),,62892.0,,,no,n/a,"The net LHLB removal (62,892 ha) requires the LHLB overlap classification; P2."
+aflb,is_forested,Analysis forest land base (AFLB),419662.9490334864,216217.0,203445.949,94.0934,no,no,"WS4 forested is a VRI treed class before ownership, non-administered, roads, and park exclusions; not AFLB."
+thlb_2022,thlb_candidate,Timber harvesting land base (THLB),246450.7176974508,51454.0,194996.718,378.9729,no,no,"Provisional candidate omits operability, low-site, non-merchantable, riparian, WTP, and OGMA/MOGMA netdowns."
+thlb_2010,thlb_candidate,Timber Harvesting Land Base (THLB),246450.7176974508,57908.0,188542.718,325.5901,no,no,2010 THLB is against CFLB after the full netdown sequence; the candidate is not comparable.
+caribou_2010_netdown,,Mountain Caribou Reserves (GAR U-3-005),,18909.0,,,no,n/a,2010 is a THLB netdown against CFLB; 2022 is an LHLB exclusion against AFLB. Keep the cycles separate.
+ogma_2010,ogma,Less temporary: Spatial OGMAs and MOGMAs,0.0,5549.0,-5549.0,-100.0,no,no,The legal OGMA layer has no TSA 27 polygons; the TSR uses non-legal FSP OGMAs/MOGMAs.

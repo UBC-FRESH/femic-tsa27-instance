@@ -6,3 +6,4 @@ ogma,0.0,0,union area of legal OGMA polygons
 thlb_candidate,246450.71769745077,32250,"provisional: forested, outside UWR and OGMA only"
 caribou_core,0.0,0,to_fetch; currently zero
 caribou_matrix,0.0,0,to_fetch; currently zero
+caribou_uwr_direct,116758.80162178102,0,direct UWR u-3-005 no-harvest clip; use this for area accounting

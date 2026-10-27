@@ -73,7 +73,7 @@ Goal: materialize and reconcile the public data needed for the TSA 27 model.
 
 - [x] P1.1 Fetch and verify the public base datasets (#9)
 - [x] P1.2 Build the TSA 27 land-base layer and caribou zone flags (#10)
-- [ ] P1.3 Reconcile land-base totals with the TSR4 and 2022 tables (#11)
+- [x] P1.3 Reconcile land-base totals with the TSR4 and 2022 tables (#11)
 
 Acceptance criteria:
 
