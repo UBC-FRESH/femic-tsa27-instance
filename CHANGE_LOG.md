@@ -53,3 +53,8 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - P3.4: ran the capacity test (24.2M m³ at offset 0) and the UWR-constrained run (13.66M m³, 57,941 ha treated). Reports: `reports/tsa27-ws4-dataset.md`, `reports/tsa27-base-run.md`.
 
 - P3 is `pr-open`: all four tasks are complete; the phase pull request is queued for review.
+
+### P4 Caribou scenarios — 2026-10-28
+
+- P3 closed: pull request #24 merged as `e14d455`; the merge tree equals the approved head tree. Child issues #20–#23 are closed.
+- Activated P4 with parent issue #25 and child issues #26–#29. The first task is P4.1, the scenario registry and runners.
