@@ -13,3 +13,4 @@ pandas-stubs>=2.2
 geopandas>=1.0
 pyogrio>=0.9
 types-PyYAML>=6.0
+pyarrow>=15

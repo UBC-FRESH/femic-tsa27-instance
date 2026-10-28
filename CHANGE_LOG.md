@@ -41,3 +41,15 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - P2.4: QA report at `reports/tsa27-model-input-qa.md`. The THLB is 21,194 ha above TSR4 and 27,648 ha above TSR5 because the legacy compile did not apply the full netdown sequence; this is explained and deferred to P3. Caribou flags will be joined in P3.
 
 - P2 is `pr-open`: all four tasks are complete; the phase pull request is queued for review.
+
+### P3 WS4 dataset — 2026-10-27
+
+- P2 closed: pull request #18 merged as `9e60a5a`; the merge tree equals the approved head tree. Child issues #14–#17 are closed.
+- Activated P3 with parent issue #19 and child issues #20–#23. The first task is P3.1, the WS4 fragment layer and caribou attributes.
+
+- P3.1: built 37,463 WS4 fragments (402,791 ha; 79,102 ha THLB); UWR flag covers 108,458 ha / 8,029 fragments.
+- P3.2: exported Patchworks XML/fragments and compiled `build/compiled` (40,660 fragments; 4,746 tracks; 54,510 features; 94 accounts).
+- P3.3: applied the UWR u-3-005 no-harvest schedule filter (1,940 of 8,107 rows excluded); matrix 13% and historical deferral mapped but not enforced.
+- P3.4: ran the capacity test (24.2M m³ at offset 0) and the UWR-constrained run (13.66M m³, 57,941 ha treated). Reports: `reports/tsa27-ws4-dataset.md`, `reports/tsa27-base-run.md`.
+
+- P3 is `pr-open`: all four tasks are complete; the phase pull request is queued for review.

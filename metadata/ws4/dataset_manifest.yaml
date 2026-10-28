@@ -1,0 +1,25 @@
+schema_version: 1
+case: tsa27
+build_command: ws4 build --xml output/patchworks/forestmodel.xml --fragments output/patchworks/fragments/fragments.shp
+  --out build/compiled
+sources:
+  forestmodel_xml:
+    path: output/patchworks/forestmodel.xml
+    sha256: 88a029aea18c3493b3993bd328e9a2722055dd086d74da473ff8e2c66ddb4c15
+  fragments_shp:
+    path: output/patchworks/fragments/fragments.shp
+    sha256: b1ddbec0becb032b84993d1aa04063bd76e6348e0906e0d2a4f0b09a20dd823e
+tables:
+  fragments: 40660
+  tracks: 4746
+  curves: 7973
+  features: 54510
+  products: 33579
+  treatments: 3000
+  accounts: 94
+base_run:
+  schedule: scenarios/s3_base.schedule.csv
+  years: 250
+  treated_area_ha: 79101.75504091532
+  harvest_m3: 24218811.76754245
+  note: 'capacity test: all eligible blocks scheduled at offset 0; not an AAC forecast'

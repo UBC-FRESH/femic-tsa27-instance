@@ -126,3 +126,17 @@ def test_main_check_fails_on_empty_au(tmp_path: Path, monkeypatch: pytest.Monkey
         ]
     )
     assert code == 1
+
+
+def test_select_base_vri_without_project() -> None:
+    """A layer without a PROJECT column is returned unchanged."""
+    layer = make_layer()
+    assert build_analysis_units.select_base_vri(layer) is layer
+
+
+def test_select_base_vri_with_project() -> None:
+    """The TSA base project is selected and other projects are dropped."""
+    layer = make_layer()
+    layer["PROJECT"] = ["REVELSTOKE_VRI", "OTHER", "REVELSTOKE_VRI"]
+    selected = build_analysis_units.select_base_vri(layer)
+    assert len(selected) == 2
