@@ -4,20 +4,23 @@ scenarios:
   s0_tsr4_base:
     status: proxy
     schedule: scenarios/s3_base_caribou_uwr_excluded.schedule.csv
-    note: Current UWR boundary used as a proxy for the 2010 TSR4 base; the 2010 layer is not available.
+    note: Current UWR boundary used as a proxy for the 2010 TSR4 base; the 2010 layer
+      is not available.
   s1_tsr4_incremental_back:
     status: unavailable
     reason: The incremental GAR layer is not available in the instance.
   s2_tsr4_no_caribou_lu_biodiversity:
     status: unavailable
-    reason: Requires an XML feature variant that removes the caribou-LU mature/old constraints.
+    reason: Requires an XML feature variant that removes the caribou-LU mature/old
+      constraints.
   s3_tsr5_base:
     status: supported
     schedule: scenarios/s3_base_caribou_uwr_excluded.schedule.csv
     note: UWR u-3-005 no-harvest enforced by the schedule filter.
   s4_tsr5_recovery:
     status: unavailable
-    reason: Core/matrix caribou habitat layers are not available; matrix 13% is mapped but not enforced.
+    reason: Core/matrix caribou habitat layers are not available; matrix 13% is mapped
+      but not enforced.
   s5_tsr3_style:
     status: unavailable
     reason: The historical HLP caribou zone and immature deferral layers are not available.
@@ -25,3 +28,17 @@ scenarios:
     status: supported
     schedule: scenarios/s3_base.schedule.csv
     note: No caribou filter; capacity comparison.
+  s7_evenflow_caribou:
+    status: targets_ready_blocked_dataset
+    targets: config/ws4/targets/evenflow_caribou.yaml
+    dataset: build/compiled_uwr
+    years: 200
+    period_width: 10
+    note: Maximum even-flow with UWR u-3-005; needs the UWR-filtered dataset.
+  s8_evenflow_no_caribou:
+    status: targets_ready
+    targets: config/ws4/targets/evenflow_no_caribou.yaml
+    dataset: build/compiled
+    years: 200
+    period_width: 10
+    note: Maximum even-flow, no caribou constraint.

@@ -1,0 +1,57 @@
+# WS4 even-flow targets — S8 even-flow, no caribou constraints
+#
+# Horizon 200 years in 10-year periods (20 periods).
+# Harvest floor     : product.HarvestedVolume.managed.Total.CC >= 1,900,000 m3 per period (starting probe)
+# Even-flow band    : every period within +/-1% of the reference period (the last)
+# Growing-stock floor: feature.Yield.managed.Total >= 24,218,812 m3 at the end of every period
+#                      (= current growing stock on the 79,102 ha THLB, offset -1)
+# Prio 1 = growing stock (hard), prio 2 = harvest level and shape.
+#
+# The 1,900,000 floor is a starting probe, NOT the answer. `scripts/max_flow.py`
+# replaces the harvest floors with a binary search for the highest feasible constant
+# level and keeps every other target here unchanged.
+#
+# Caribou layer: none. Runs on build/compiled, the same dataset as s6_no_caribou.
+
+targets:
+  - {account: feature.Yield.managed.Total, period: 1, period_width: 10, minimum: 24218812, min_weight: 1.0, priority: 1}
+  - {account: feature.Yield.managed.Total, period: 2, period_width: 10, minimum: 24218812, min_weight: 1.0, priority: 1}
+  - {account: feature.Yield.managed.Total, period: 3, period_width: 10, minimum: 24218812, min_weight: 1.0, priority: 1}
+  - {account: feature.Yield.managed.Total, period: 4, period_width: 10, minimum: 24218812, min_weight: 1.0, priority: 1}
+  - {account: feature.Yield.managed.Total, period: 5, period_width: 10, minimum: 24218812, min_weight: 1.0, priority: 1}
+  - {account: feature.Yield.managed.Total, period: 6, period_width: 10, minimum: 24218812, min_weight: 1.0, priority: 1}
+  - {account: feature.Yield.managed.Total, period: 7, period_width: 10, minimum: 24218812, min_weight: 1.0, priority: 1}
+  - {account: feature.Yield.managed.Total, period: 8, period_width: 10, minimum: 24218812, min_weight: 1.0, priority: 1}
+  - {account: feature.Yield.managed.Total, period: 9, period_width: 10, minimum: 24218812, min_weight: 1.0, priority: 1}
+  - {account: feature.Yield.managed.Total, period: 10, period_width: 10, minimum: 24218812, min_weight: 1.0, priority: 1}
+  - {account: feature.Yield.managed.Total, period: 11, period_width: 10, minimum: 24218812, min_weight: 1.0, priority: 1}
+  - {account: feature.Yield.managed.Total, period: 12, period_width: 10, minimum: 24218812, min_weight: 1.0, priority: 1}
+  - {account: feature.Yield.managed.Total, period: 13, period_width: 10, minimum: 24218812, min_weight: 1.0, priority: 1}
+  - {account: feature.Yield.managed.Total, period: 14, period_width: 10, minimum: 24218812, min_weight: 1.0, priority: 1}
+  - {account: feature.Yield.managed.Total, period: 15, period_width: 10, minimum: 24218812, min_weight: 1.0, priority: 1}
+  - {account: feature.Yield.managed.Total, period: 16, period_width: 10, minimum: 24218812, min_weight: 1.0, priority: 1}
+  - {account: feature.Yield.managed.Total, period: 17, period_width: 10, minimum: 24218812, min_weight: 1.0, priority: 1}
+  - {account: feature.Yield.managed.Total, period: 18, period_width: 10, minimum: 24218812, min_weight: 1.0, priority: 1}
+  - {account: feature.Yield.managed.Total, period: 19, period_width: 10, minimum: 24218812, min_weight: 1.0, priority: 1}
+  - {account: feature.Yield.managed.Total, period: 20, period_width: 10, minimum: 24218812, min_weight: 1.0, priority: 1}
+  - {account: product.HarvestedVolume.managed.Total.CC, period: 1, period_width: 10, flow: even, minimum: -1, maximum: 1, min_weight: 10000, max_weight: 10000, shape: non_linear, priority: 2}
+  - {account: product.HarvestedVolume.managed.Total.CC, period: 1, period_width: 10, minimum: 1900000, min_weight: 1.0, priority: 2}
+  - {account: product.HarvestedVolume.managed.Total.CC, period: 2, period_width: 10, minimum: 1900000, min_weight: 1.0, priority: 2}
+  - {account: product.HarvestedVolume.managed.Total.CC, period: 3, period_width: 10, minimum: 1900000, min_weight: 1.0, priority: 2}
+  - {account: product.HarvestedVolume.managed.Total.CC, period: 4, period_width: 10, minimum: 1900000, min_weight: 1.0, priority: 2}
+  - {account: product.HarvestedVolume.managed.Total.CC, period: 5, period_width: 10, minimum: 1900000, min_weight: 1.0, priority: 2}
+  - {account: product.HarvestedVolume.managed.Total.CC, period: 6, period_width: 10, minimum: 1900000, min_weight: 1.0, priority: 2}
+  - {account: product.HarvestedVolume.managed.Total.CC, period: 7, period_width: 10, minimum: 1900000, min_weight: 1.0, priority: 2}
+  - {account: product.HarvestedVolume.managed.Total.CC, period: 8, period_width: 10, minimum: 1900000, min_weight: 1.0, priority: 2}
+  - {account: product.HarvestedVolume.managed.Total.CC, period: 9, period_width: 10, minimum: 1900000, min_weight: 1.0, priority: 2}
+  - {account: product.HarvestedVolume.managed.Total.CC, period: 10, period_width: 10, minimum: 1900000, min_weight: 1.0, priority: 2}
+  - {account: product.HarvestedVolume.managed.Total.CC, period: 11, period_width: 10, minimum: 1900000, min_weight: 1.0, priority: 2}
+  - {account: product.HarvestedVolume.managed.Total.CC, period: 12, period_width: 10, minimum: 1900000, min_weight: 1.0, priority: 2}
+  - {account: product.HarvestedVolume.managed.Total.CC, period: 13, period_width: 10, minimum: 1900000, min_weight: 1.0, priority: 2}
+  - {account: product.HarvestedVolume.managed.Total.CC, period: 14, period_width: 10, minimum: 1900000, min_weight: 1.0, priority: 2}
+  - {account: product.HarvestedVolume.managed.Total.CC, period: 15, period_width: 10, minimum: 1900000, min_weight: 1.0, priority: 2}
+  - {account: product.HarvestedVolume.managed.Total.CC, period: 16, period_width: 10, minimum: 1900000, min_weight: 1.0, priority: 2}
+  - {account: product.HarvestedVolume.managed.Total.CC, period: 17, period_width: 10, minimum: 1900000, min_weight: 1.0, priority: 2}
+  - {account: product.HarvestedVolume.managed.Total.CC, period: 18, period_width: 10, minimum: 1900000, min_weight: 1.0, priority: 2}
+  - {account: product.HarvestedVolume.managed.Total.CC, period: 19, period_width: 10, minimum: 1900000, min_weight: 1.0, priority: 2}
+  - {account: product.HarvestedVolume.managed.Total.CC, period: 20, period_width: 10, minimum: 1900000, min_weight: 1.0, priority: 2}
