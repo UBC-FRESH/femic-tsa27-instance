@@ -1,0 +1,40 @@
+{
+  "scenarios": [
+    {
+      "scenario": "s3_tsr5_base",
+      "status": "supported",
+      "schedule": "scenarios/s3_base_caribou_uwr_excluded.schedule.csv",
+      "out": "runs/s3_tsr5_base",
+      "command": [
+        "ws4",
+        "simulate",
+        "--dataset",
+        "build/compiled",
+        "--schedule",
+        "scenarios/s3_base_caribou_uwr_excluded.schedule.csv",
+        "--years",
+        "250",
+        "--out",
+        "runs/s3_tsr5_base"
+      ]
+    },
+    {
+      "scenario": "s6_no_caribou",
+      "status": "supported",
+      "schedule": "scenarios/s3_base.schedule.csv",
+      "out": "runs/s6_no_caribou",
+      "command": [
+        "ws4",
+        "simulate",
+        "--dataset",
+        "build/compiled",
+        "--schedule",
+        "scenarios/s3_base.schedule.csv",
+        "--years",
+        "250",
+        "--out",
+        "runs/s6_no_caribou"
+      ]
+    }
+  ]
+}

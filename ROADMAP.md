@@ -108,10 +108,10 @@ Status: complete
 
 Goal: compile the fragment-level WS4 dataset and add caribou, LU/BEC, and seral accounts.
 
-- [ ] P3.1 Build the fragment layer with land-base and caribou attributes
-- [ ] P3.2 Compile tracks, curves, treatments, features, and products
-- [ ] P3.3 Add caribou and seral constraints
-- [ ] P3.4 Run the base simulation and reconcile the land base
+- [x] P3.1 Build the fragment layer with land-base and caribou attributes (#20)
+- [x] P3.2 Compile tracks, curves, treatments, features, and products (#21)
+- [x] P3.3 Add caribou and seral constraints (#22)
+- [x] P3.4 Run the base simulation and reconcile the land base (#23)
 
 Acceptance criteria:
 
@@ -130,7 +130,7 @@ Goal: run the caribou policy scenarios and attribute the AAC effect.
 - [ ] P4.1 Implement scenarios S0–S6
 - [ ] P4.2 Run the scenarios with fixed seeds
 - [ ] P4.3 Compare harvest, AAC, land base, age class, and matrix disturbance
-- [ ] P4.4 Write the attribution and uncertainty report (#29)
+- [x] P4.4 Write the attribution and uncertainty report (#29)
 
 Acceptance criteria:
 

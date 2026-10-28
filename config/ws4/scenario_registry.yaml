@@ -1,0 +1,27 @@
+schema_version: 1
+dataset: build/compiled
+scenarios:
+  s0_tsr4_base:
+    status: proxy
+    schedule: scenarios/s3_base_caribou_uwr_excluded.schedule.csv
+    note: Current UWR boundary used as a proxy for the 2010 TSR4 base; the 2010 layer is not available.
+  s1_tsr4_incremental_back:
+    status: unavailable
+    reason: The incremental GAR layer is not available in the instance.
+  s2_tsr4_no_caribou_lu_biodiversity:
+    status: unavailable
+    reason: Requires an XML feature variant that removes the caribou-LU mature/old constraints.
+  s3_tsr5_base:
+    status: supported
+    schedule: scenarios/s3_base_caribou_uwr_excluded.schedule.csv
+    note: UWR u-3-005 no-harvest enforced by the schedule filter.
+  s4_tsr5_recovery:
+    status: unavailable
+    reason: Core/matrix caribou habitat layers are not available; matrix 13% is mapped but not enforced.
+  s5_tsr3_style:
+    status: unavailable
+    reason: The historical HLP caribou zone and immature deferral layers are not available.
+  s6_no_caribou:
+    status: supported
+    schedule: scenarios/s3_base.schedule.csv
+    note: No caribou filter; capacity comparison.
