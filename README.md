@@ -17,7 +17,7 @@ The TSR evidence and the answers are in [`reports/tsa27-tsr-corpus-analysis.md`]
 
 ## Status
 
-Phase P0 is complete and Phase P1 is complete and Phase P2 is complete and Phase P3 (WS4 dataset) is active. `ROADMAP.md` is the plan of record; the GitHub issues carry the live status. The FEMIC instance scaffold, the TSR evidence base, and the model-building plan are in place; the public data and the WS4 dataset are not yet built.
+Phase P0 is complete and Phase P1 is complete and Phase P2 is complete and Phase P3 is complete and Phase P4 (caribou scenarios) is active. `ROADMAP.md` is the plan of record; the GitHub issues carry the live status. The FEMIC instance scaffold, the TSR evidence base, and the model-building plan are in place; the public data and the WS4 dataset are not yet built.
 
 ## Evidence base
 

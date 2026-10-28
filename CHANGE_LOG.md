@@ -53,3 +53,15 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - P3.4: ran the capacity test (24.2M m³ at offset 0) and the UWR-constrained run (13.66M m³, 57,941 ha treated). Reports: `reports/tsa27-ws4-dataset.md`, `reports/tsa27-base-run.md`.
 
 - P3 is `pr-open`: all four tasks are complete; the phase pull request is queued for review.
+
+### P4 Caribou scenarios — 2026-10-28
+
+- P3 closed: pull request #24 merged as `e14d455`; the merge tree equals the approved head tree. Child issues #20–#23 are closed.
+- Activated P4 with parent issue #25 and child issues #26–#29. The first task is P4.1, the scenario registry and runners.
+
+- P4.1: added the scenario registry and runner. Supported: S3 UWR base and S6 no caribou. S0 proxy and S1/S2/S4/S5 unavailable with explicit reasons.
+- P4.2: ran `s3_tsr5_base` and `s6_no_caribou`; record in `metadata/ws4/scenario_runs.json`.
+- P4.3: UWR reduces first-period harvest by 10,557,873 m3 (-43.6%) and treated area by 21,160 ha (-26.8%) vs no caribou. Comparison in `metadata/ws4/scenario_comparison.csv`.
+- P4.4: attribution and uncertainty report at `reports/tsa27-caribou-attribution.md`; states the result is capacity, not AAC.
+
+- P4 is `pr-open`: all four tasks are complete; the phase pull request is queued for review.

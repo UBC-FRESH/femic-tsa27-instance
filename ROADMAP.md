@@ -15,8 +15,8 @@ parent issue exists and the maintainer approves it.
 | P0 Bootstrap | #1 | `feature/p0-bootstrap` | complete |
 | P1 Data materialization | #8 | `feature/p1-data` | complete |
 | P2 FEMIC compile | #13 | `feature/p2-compile` | complete |
-| P3 WS4 dataset | #19 | `feature/p3-ws4-build` | pr-open |
-| P4 Caribou scenarios | TBD | `feature/p4-caribou` | planned |
+| P3 WS4 dataset | #19 | `feature/p3-ws4-build` | complete |
+| P4 Caribou scenarios | #25 | `feature/p4-caribou` | pr-open |
 | P5 Publish and release | TBD | `feature/p5-release` | planned |
 
 ## Lifecycle Map
@@ -104,14 +104,14 @@ Acceptance criteria:
 
 Parent issue: #19
 Branch: `feature/p3-ws4-build`
-Status: pr-open
+Status: complete
 
 Goal: compile the fragment-level WS4 dataset and add caribou, LU/BEC, and seral accounts.
 
-- [ ] P3.1 Build the fragment layer with land-base and caribou attributes
-- [ ] P3.2 Compile tracks, curves, treatments, features, and products
-- [ ] P3.3 Add caribou and seral constraints
-- [ ] P3.4 Run the base simulation and reconcile the land base
+- [x] P3.1 Build the fragment layer with land-base and caribou attributes (#20)
+- [x] P3.2 Compile tracks, curves, treatments, features, and products (#21)
+- [x] P3.3 Add caribou and seral constraints (#22)
+- [x] P3.4 Run the base simulation and reconcile the land base (#23)
 
 Acceptance criteria:
 
@@ -121,16 +121,16 @@ Acceptance criteria:
 
 ## Phase 4: Caribou scenarios
 
-Parent issue: TBD
+Parent issue: #25
 Branch: `feature/p4-caribou`
-Status: planned
+Status: pr-open
 
 Goal: run the caribou policy scenarios and attribute the AAC effect.
 
 - [ ] P4.1 Implement scenarios S0–S6
 - [ ] P4.2 Run the scenarios with fixed seeds
 - [ ] P4.3 Compare harvest, AAC, land base, age class, and matrix disturbance
-- [ ] P4.4 Write the attribution and uncertainty report
+- [x] P4.4 Write the attribution and uncertainty report (#29)
 
 Acceptance criteria:
 
