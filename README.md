@@ -17,7 +17,16 @@ The TSR evidence and the answers are in [`reports/tsa27-tsr-corpus-analysis.md`]
 
 ## Status
 
-Phase P0 is complete and Phase P1 is complete and Phase P2 is complete and Phase P3 is complete and Phase P4 (caribou scenarios) is active. `ROADMAP.md` is the plan of record; the GitHub issues carry the live status. The FEMIC instance scaffold, the TSR evidence base, and the model-building plan are in place; the public data and the WS4 dataset are not yet built.
+Phase P0 is complete and Phase P1 is complete and Phase P2 is complete and Phase P3 is complete and Phase P5 (publish and release) is active. The model is built and the first-period caribou comparison is published. `ROADMAP.md` is the plan of record; the GitHub issues carry the live status. The FEMIC instance scaffold, the TSR evidence base, and the model-building plan are in place; the public data and the WS4 dataset are not yet built.
+
+## First results
+
+| Scenario | Harvest at offset 0 | Treated |
+|---|---:|---:|
+| `s6_no_caribou` | 24,218,812 m³ | 79,102 ha |
+| `s3_tsr5_base` (UWR no-harvest) | 13,660,939 m³ | 57,941 ha |
+
+The UWR no-harvest filter reduces first-period harvest capacity by **43.6%**. This is capacity, not AAC; the multi-rotation AAC optimization is the next modelling step. Full report: [`reports/tsa27-final-report.md`](reports/tsa27-final-report.md).
 
 ## Evidence base
 

@@ -14,6 +14,7 @@ and cite it in their reports. Start with the repository's ``AGENTS.md`` and ``RO
    overview
    data-provenance
    model-design
+   model-results
    limitations
 
 .. toctree::

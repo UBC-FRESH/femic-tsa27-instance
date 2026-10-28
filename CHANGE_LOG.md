@@ -65,3 +65,8 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - P4.4: attribution and uncertainty report at `reports/tsa27-caribou-attribution.md`; states the result is capacity, not AAC.
 
 - P4 is `pr-open`: all four tasks are complete; the phase pull request is queued for review.
+
+### P5 Publish and release — 2026-10-28
+
+- P4 closed: pull request #30 merged as `b241595`; the merge tree equals the approved head tree. Child issues #26–#29 are closed.
+- Activated P5 with parent issue #31 and child issues #32–#34.
