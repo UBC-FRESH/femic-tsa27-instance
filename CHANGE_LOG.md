@@ -70,3 +70,5 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 
 - P4 closed: pull request #30 merged as `b241595`; the merge tree equals the approved head tree. Child issues #26–#29 are closed.
 - Activated P5 with parent issue #31 and child issues #32–#34.
+
+- P5 complete: tag `v0.1.0`, GitHub release published, Pages live at https://ubc-fresh.github.io/femic-tsa27-instance/, FEMIC submodule PR #444 merged as `059fba5`.

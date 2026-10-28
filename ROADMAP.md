@@ -17,7 +17,7 @@ parent issue exists and the maintainer approves it.
 | P2 FEMIC compile | #13 | `feature/p2-compile` | complete |
 | P3 WS4 dataset | #19 | `feature/p3-ws4-build` | complete |
 | P4 Caribou scenarios | #25 | `feature/p4-caribou` | complete |
-| P5 Publish and release | #31 | `feature/p5-release` | active |
+| P5 Publish and release | #31 | `feature/p5-release` | complete |
 
 ## Lifecycle Map
 
@@ -142,13 +142,13 @@ Acceptance criteria:
 
 Parent issue: #31
 Branch: `feature/p5-release`
-Status: active
+Status: complete
 
 Goal: publish the instance and cross-link it from the FEMIC repository.
 
-- [ ] P5.1 Write the final report, docs, and figures (#32)
-- [ ] P5.2 Add the instance as a submodule at `femic/external/femic-tsa27-instance` (#33)
-- [ ] P5.3 Tag and release after review (#34)
+- [x] P5.1 Write the final report, docs, and figures (#32)
+- [x] P5.2 Add the instance as a submodule at `femic/external/femic-tsa27-instance` (#33)
+- [x] P5.3 Tag and release after review (#34)
 
 Acceptance criteria:
 
