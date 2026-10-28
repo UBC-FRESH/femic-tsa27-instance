@@ -8,5 +8,6 @@
 - [Overview](overview.html): the question, the four caribou policy layers, and the evidence base.
 - [Data provenance](data-provenance.html): public sources, storage, and tracked artifacts.
 - [Model design](model-design.html): land base, caribou layers, scenarios, and verification.
+- [Model results](model-results.html): the capacity comparison and the AAC limitation.
 - [Limitations](limitations.html): what is unpublished, uncertain, or not redistributed.
 - [API reference](api/index.html): every public function, with its parameters, types, and return values.
