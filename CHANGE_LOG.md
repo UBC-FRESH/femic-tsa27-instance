@@ -63,3 +63,5 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - P4.2: ran `s3_tsr5_base` and `s6_no_caribou`; record in `metadata/ws4/scenario_runs.json`.
 - P4.3: UWR reduces first-period harvest by 10,557,873 m3 (-43.6%) and treated area by 21,160 ha (-26.8%) vs no caribou. Comparison in `metadata/ws4/scenario_comparison.csv`.
 - P4.4: attribution and uncertainty report at `reports/tsa27-caribou-attribution.md`; states the result is capacity, not AAC.
+
+- P4 is `pr-open`: all four tasks are complete; the phase pull request is queued for review.

@@ -16,7 +16,7 @@ parent issue exists and the maintainer approves it.
 | P1 Data materialization | #8 | `feature/p1-data` | complete |
 | P2 FEMIC compile | #13 | `feature/p2-compile` | complete |
 | P3 WS4 dataset | #19 | `feature/p3-ws4-build` | complete |
-| P4 Caribou scenarios | #25 | `feature/p4-caribou` | active |
+| P4 Caribou scenarios | #25 | `feature/p4-caribou` | pr-open |
 | P5 Publish and release | TBD | `feature/p5-release` | planned |
 
 ## Lifecycle Map
@@ -123,7 +123,7 @@ Acceptance criteria:
 
 Parent issue: #25
 Branch: `feature/p4-caribou`
-Status: active
+Status: pr-open
 
 Goal: run the caribou policy scenarios and attribute the AAC effect.
 
