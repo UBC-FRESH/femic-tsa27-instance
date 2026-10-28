@@ -16,8 +16,8 @@ parent issue exists and the maintainer approves it.
 | P1 Data materialization | #8 | `feature/p1-data` | complete |
 | P2 FEMIC compile | #13 | `feature/p2-compile` | complete |
 | P3 WS4 dataset | #19 | `feature/p3-ws4-build` | complete |
-| P4 Caribou scenarios | #25 | `feature/p4-caribou` | pr-open |
-| P5 Publish and release | TBD | `feature/p5-release` | planned |
+| P4 Caribou scenarios | #25 | `feature/p4-caribou` | complete |
+| P5 Publish and release | #31 | `feature/p5-release` | active |
 
 ## Lifecycle Map
 
@@ -123,13 +123,13 @@ Acceptance criteria:
 
 Parent issue: #25
 Branch: `feature/p4-caribou`
-Status: pr-open
+Status: complete
 
 Goal: run the caribou policy scenarios and attribute the AAC effect.
 
-- [ ] P4.1 Implement scenarios S0–S6
-- [ ] P4.2 Run the scenarios with fixed seeds
-- [ ] P4.3 Compare harvest, AAC, land base, age class, and matrix disturbance
+- [x] P4.1 Implement scenarios S0–S6 (#26)
+- [x] P4.2 Run the scenarios with fixed seeds (#27)
+- [x] P4.3 Compare harvest, AAC, land base, age class, and matrix disturbance (#28)
 - [x] P4.4 Write the attribution and uncertainty report (#29)
 
 Acceptance criteria:
@@ -140,15 +140,15 @@ Acceptance criteria:
 
 ## Phase 5: Publish and release
 
-Parent issue: TBD
+Parent issue: #31
 Branch: `feature/p5-release`
-Status: planned
+Status: active
 
 Goal: publish the instance and cross-link it from the FEMIC repository.
 
-- [ ] P5.1 Write the final report, docs, and figures
-- [ ] P5.2 Add the instance as a submodule at `femic/external/femic-tsa27-instance`
-- [ ] P5.3 Tag and release after review
+- [ ] P5.1 Write the final report, docs, and figures (#32)
+- [ ] P5.2 Add the instance as a submodule at `femic/external/femic-tsa27-instance` (#33)
+- [ ] P5.3 Tag and release after review (#34)
 
 Acceptance criteria:
 
