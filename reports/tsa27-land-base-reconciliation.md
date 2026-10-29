@@ -1,7 +1,6 @@
 # TSA 27 land-base reconciliation
 
-This report compares the provisional P1.2 land base with the TSR4 2010 and 2022 TSR5 tables.
-Only the gross land base and the direct caribou UWR clip are directly comparable at this stage.
+This report compares the provisional P1.2 land base with the TSR4 2010 and 2022 TSR5 tables. Only the gross land base and the direct caribou UWR clip are directly comparable at this stage.
 
 Inputs: `metadata/land_base/tsa27_land_base_summary.csv`, `metadata/tsr/tsa27_thlb_netdown_table3.csv`, and `metadata/tsr/tsa27_thlb_netdown_table14_2022.csv`.
 

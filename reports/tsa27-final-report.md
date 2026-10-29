@@ -1,6 +1,6 @@
 # TSA 27 Revelstoke — final report
 
-**Status:** public instance release candidate. Model built; AAC not yet estimated.
+**Status:** public instance release candidate. Model built; preliminary AAC range estimated, not an official determination.
 
 ## Question
 
@@ -43,11 +43,29 @@ The TSR4 2010 sensitivities remain the quantitative benchmark:
 
 The WS4 UWR result is much larger because it removes the entire UWR, not just the incremental reserves. It is not a like-for-like TSR4 test. The 2022 TSR5 base case is unpublished; the 2022-style result is a documented best guess.
 
+## 2026 update: even-flow and operational attribution
+
+The later operational work adds a preliminary even-flow range and a public-data attribution envelope.
+
+| Result | Value |
+|---|---:|
+| S7 caribou/UWR max even-flow | 1.58–1.74M m³ per 10-year period (70–77% of AAC) |
+| S8 no-caribou max even-flow | 2.21–2.44M m³ per 10-year period (98–108% of AAC) |
+| 2019 UWR expansion | 0.841M m³ positive-margin volume removed (9.8% of pre-2019 pool) |
+| Fire no-salvage | <0.6% of the positive pool in a year |
+| Mill design capacity | Downie alone 2.10× AAC; not binding |
+| 2021–2022 | Quantity/processing constraint robust at 77.8–96.2% and 67.1–95.6% positive vs 30.2% and 55.0% HBS |
+| 2019, 2025 | Range-dependent; not uniquely identified without TSA billed stumpage |
+
+The full synthesis is in `reports/tsa27-counterfactual-synthesis.md` and the public-data ranges are in `reports/tsa27-public-data-envelope.md` and `reports/tsa27-nested-public-scenarios.md`. The two-page answer is `reports/tsa27-executive-brief.md`.
+
 ## What is not done
 
 - The **matrix 13% <40 years** and the **80-year historical deferral** are mapped in `config/ws4/caribou_constraints.yaml` but not enforced.
 - The **AAC** requires a multi-rotation WS4 optimization and the full TSR netdown sequence. The current THLB is 79,102 ha vs the TSR 57,908/51,454 ha.
 - The core/matrix and historical HLP layers are `to_fetch`.
+- A TSA-27 billed-stumpage series and dated local mill-curtailment series are not available in the public record; the model uses public ranges and switches.
+- Burn severity, salvage, and post-fire recovery are not modelled.
 
 ## Reproduce
 

@@ -33,8 +33,14 @@ def public_qualnames() -> list[str]:
         sorted so that the test identifiers are stable.
     """
     names: list[str] = []
+    optional = {"scipy", "ws4", "pypdf"}
     for path in sorted(SCRIPTS.glob("*.py")):
-        module = importlib.import_module(path.stem)
+        try:
+            module = importlib.import_module(path.stem)
+        except ModuleNotFoundError as error:
+            if error.name in optional:
+                continue
+            raise
         for name, value in getmembers(module, isfunction):
             if not name.startswith("_") and value.__module__ == module.__name__:
                 names.append(f"{module.__name__}.{name}")

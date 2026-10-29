@@ -1,0 +1,11 @@
+year,south_east_avg_stumpage_per_m3,status,source,note
+2017,32.53,proxy,2018 Interior Appraisal Manual Table 6-1,2017 master not linked; 2018 value used as proxy
+2018,32.53,observed,2018 Interior Appraisal Manual Table 6-1,South East zone average all species
+2019,31.52,observed,2019 Interior Appraisal Manual Table 6-1,South East zone average all species
+2020,55.22,observed,2020 Interior Appraisal Manual Table 6-1,South East zone average all species
+2021,47.10,observed,2021 Interior Appraisal Manual Table 6-1,South East zone average all species
+2022,47.10,observed,2022 Interior Appraisal Manual Table 6-1,South East zone average all species
+2023,47.10,held,2022 value,No machine-readable 2023 table retrieved; 2022 rate held
+2024,47.10,held,2022 value,No machine-readable 2024 table retrieved; 2022 rate held
+2025,47.10,held,2022 value,No machine-readable 2025 table retrieved; 2022 rate held
+2026,12.76,observed,Interior Non-Appraised Tabular Stumpage Rates January 1 2026 Table 6-1,South East zone average all species

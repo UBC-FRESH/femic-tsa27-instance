@@ -1,0 +1,11 @@
+category,basis,value_cad_2026,source,note
+road_build_low,per_km,38000,FPInnovations Jade Road trial 2023,Lower bound for re-establishing a resource road
+road_build_central,per_km,60000,FERIC TR-28 + FPInnovations Jade Road,Subgrade plus surfacing/culvert allowance
+road_build_high,per_km,100000,Planning range,Upper bound for difficult terrain and full surfacing
+resource_maintenance_low,per_km_year,750,Planning assumption,No TSA-27-specific public contract rate found
+resource_maintenance_central,per_km_year,1500,Planning assumption,No TSA-27-specific public contract rate found
+resource_maintenance_high,per_km_year,3000,Planning assumption,No TSA-27-specific public contract rate found
+discount_rate,per_year,0.05,Public-sector real discount convention,Used to amortise spur and road re-opening capital
+spur_life_years,years,20,Planning assumption,Amortisation life for a new access spur
+period_years,years,5,Screen envelope,Matches the five-year AAC envelope
+tr28_d8h_subgrade,per_km,32960,FERIC TR-28 CPI-adjusted to 2026,Subgrade only; central rate adds surfacing and drainage
