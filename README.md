@@ -96,11 +96,13 @@ This is a DataLad dataset (`.datalad/config`, dataset id
 `ws4/femic-tsa27-instance` path is a symlink to it.
 
 Public source downloads under `data/downloads/bc/` are annexed with
-`MD5E`; they are not committed as Git blobs and are available from the local
-annex on the machine that created the dataset.  The Arbutus S3 special remote
-is not initialized yet because this environment has no bucket/credentials;
-use the FEMIC `public-data-mirror-runbook` once those are available, with a
-bucket such as `ubc-fresh-femic-tsa27-instance`.
+`MD5E`, not committed as Git blobs.  The Arbutus S3 special remote
+`arbutus-s3` is initialized against the dedicated bucket
+`ubc-fresh-femic-tsa27-instance`; the 7 public downloads (262.63 MB) are
+uploaded and publicly readable at
+`https://object-arbutus.alliancecan.ca/a0d141b801c74d0a819c09b4bde9c3fb:ubc-fresh-femic-tsa27-instance`.
+The remote is auto-enabled for clones, so `git annex get` / `datalad get`
+can materialize the data without the maintainer key.
 
 Typical checks:
 
