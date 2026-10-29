@@ -37,7 +37,9 @@ Thumbs.db
 
 # FEMIC instance: raw public data and the TSR corpus are fetched, not tracked
 data/bc/
-data/downloads/
+data/downloads/*
+!data/downloads/bc/
+!data/downloads/bc/**
 data/tsr/
 reference/tsr_pdfs/
 reference/tsr_fulltext/
