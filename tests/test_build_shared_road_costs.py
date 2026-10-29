@@ -3,6 +3,9 @@
 from __future__ import annotations
 
 import pandas as pd
+import pytest
+
+pytest.importorskip("scipy")
 
 import build_shared_road_costs
 

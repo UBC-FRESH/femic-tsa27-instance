@@ -5,15 +5,11 @@
 
 ## Answer
 
-The decline is not a single land-base effect. The ratio fell sharply in 2019–2021, recovered in
-2022, dipped in 2023, and recovered strongly in 2025. The evidence supports four layers:
+The decline is not a single land-base effect. The ratio fell sharply in 2019–2021, recovered in 2022, dipped in 2023, and recovered strongly in 2025. The evidence supports four layers:
 
-1. **Caribou/UWR is a real but bounded legal effect**, plausibly **5–15% of AAC**. The 2019
-   u-3-005 expansion (+10,601 ha) is the clearest timing event.
-2. **Fire is small at TSA scale**, under **1% of annual operable volume**, though it matters
-   locally through salvage and access.
-3. **Access and road cost condition margins**, especially for long-spur blocks, but do not show
-   a sudden aggregate collapse.
+1. **Caribou/UWR is a real but bounded legal effect**, plausibly **5–15% of AAC**. The 2019 u-3-005 expansion (+10,601 ha) is the clearest timing event.
+2. **Fire is small at TSA scale**, under **1% of annual operable volume**, though it matters locally through salvage and access.
+3. **Access and road cost condition margins**, especially for long-spur blocks, but do not show a sudden aggregate collapse.
 4. **The dominant residual is undercut / processing / mill demand**, especially in 2019–2023.
 
 ## Observed path
@@ -43,28 +39,19 @@ The decline is not a single land-base effect. The ratio fell sharply in 2019–2
 
 ## The three key years
 
-**2019.** UWR u-3-005 expands by 10,601 ha, the price index falls, and harvest drops from 92.8%
-to 49.1%. This is the one year where price and caribou timing align. The exact split is not
-identified because the public stumpage range spans the observed harvest.
+**2019.** UWR u-3-005 expands by 10,601 ha, the price index falls, and harvest drops from 92.8% to 49.1%. This is the one year where price and caribou timing align. The exact split is not identified because the public stumpage range spans the observed harvest.
 
-**2021.** Lumber prices are at their maximum, but harvest is the lowest in the series at 30.2%.
-Even at the highest public stumpage and with cost +20% and fire no-salvage, the positive-margin
-share is 77.8%. The constraint is on the quantity side: mill demand, processing, contractors,
-or operational access.
+**2021.** Lumber prices are at their maximum, but harvest is the lowest in the series at 30.2%. Even at the highest public stumpage and with cost +20% and fire no-salvage, the positive-margin share is 77.8%. The constraint is on the quantity side: mill demand, processing, contractors, or operational access.
 
-**2025.** Harvest recovers to 83.4% on a smaller cutblock area and a weaker price year than 2021.
-That rules out a simple land-base explanation. The recovery is consistent with stronger mill
-demand/processing and a lower realized stumpage, but the public data do not identify the split.
+**2025.** Harvest recovers to 83.4% on a smaller cutblock area and a weaker price year than 2021. That rules out a simple land-base explanation. The recovery is consistent with stronger mill demand/processing and a lower realized stumpage, but the public data do not identify the split.
 
 ## What this means
 
 - Do not treat the AAC-to-harvest gap as a caribou netdown. Caribou is a bounded legal effect.
 - Do not treat fire as the aggregate driver. It is a local salvage and access issue.
-- Mill volume capacity is not the constraint. Product acceptance, grade mix, and operating
-  shifts are the remaining mill questions.
+- Mill volume capacity is not the constraint. Product acceptance, grade mix, and operating shifts are the remaining mill questions.
 - The 2021–2022 trough is the strongest evidence for a quantity/processing explanation.
-- The 2019 and 2025 attributions should be reported as ranges until a TSA-specific billed
-  stumpage series is available.
+- The 2019 and 2025 attributions should be reported as ranges until a TSA-specific billed stumpage series is available.
 
 ## Evidence
 
@@ -79,5 +66,4 @@ demand/processing and a lower realized stumpage, but the public data do not iden
 
 ## Status
 
-The model is public-data only. Where a public series does not exist, the output is a documented
-range or switch, not an invented gate. The dashboard is green.
+The model is public-data only. Where a public series does not exist, the output is a documented range or switch, not an invented gate. The dashboard is green.

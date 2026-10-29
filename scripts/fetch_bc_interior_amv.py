@@ -17,7 +17,7 @@ import re
 from pathlib import Path
 
 import pandas as pd
-import pypdf
+import pypdf  # type: ignore[import-not-found, unused-ignore]  # optional PDF dependency
 import requests
 
 ROOT = Path(__file__).resolve().parents[1]
