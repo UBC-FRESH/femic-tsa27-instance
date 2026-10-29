@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import geopandas as gpd
+import pytest
 from shapely.geometry import box
 
 import build_annual_snapshots
@@ -10,6 +11,12 @@ import build_annual_snapshots
 
 def test_hbs_series_covers_snapshot_years() -> None:
     """The recovered HBS series covers every snapshot year."""
+    path = (
+        build_annual_snapshots.ROOT
+        / "runtime/document_ingestion/tsa27-dp2022-fig4/figure4_recovered.csv"
+    )
+    if not path.exists():
+        pytest.skip("HBS recovery artifact is not present in this checkout")
     frame = build_annual_snapshots.hbs_series()
     assert list(frame.year) == list(range(2017, 2027))
     assert frame.hbs_m3.notna().all()
