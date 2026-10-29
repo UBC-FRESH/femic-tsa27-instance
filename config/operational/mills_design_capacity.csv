@@ -1,0 +1,3 @@
+facility_code,facility_ownership,facility_name,location,province,facility_type,total_capacity_m3_per_year,latitude,longitude,source,source_note
+BC-SAW418,Downie Timber Ltd. and Selkirk Cedar,Revelstoke,Revelstoke,BC,SAW,471528.0,50.99,-118.20,CFS Mills DB via CLEWS,National design-capacity table; capacity is m3/year and not current throughput
+BC-SAW416,Eagle River Industries Inc.,Malakwa,Malakwa,BC,SAW,235764.0,50.96,-118.74,CFS Mills DB via CLEWS,National design-capacity table; capacity is m3/year and not current throughput

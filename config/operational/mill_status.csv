@@ -1,0 +1,3 @@
+mill_id,facility_name,location,design_capacity_m3_per_year,status,status_date,source,evidence,note
+BC-SAW418,Downie Timber Ltd. and Selkirk Cedar,Revelstoke,471528,active,2025-08-06,Gorman Group LinkedIn / Naturally Wood,"Gorman Group hosted a federal tour at the Revelstoke facility in August 2025; current supplier listing",Design capacity, not current throughput
+BC-SAW416,Eagle River Industries Inc.,Malakwa,235764,unverified_not_listed,2023-12-31,BC Major Primary Timber Processing Facilities 2019/2022/2023,"Not listed as an operating major mill in the 2019, 2022, or 2023 BC mill lists; no current company listing found",Design capacity retained as public baseline; do not assume operating capacity
