@@ -1,7 +1,6 @@
 # TSA 27 nested public-data scenarios
 
-**Status:** nested public-data grid, 29 October 2026.
-**Not a single-point attribution.**
+**Status:** nested public-data grid, 29 October 2026. **Not a single-point attribution.**
 
 ## Dimensions
 
@@ -34,12 +33,9 @@ That is 240 combinations.
 
 ### 2021–2022 remain quantity/processing years
 
-Even at the worst corner — highest public stumpage, cost +20%, fire no-salvage — the 2021
-positive-margin share is **77.8%** and 2022 is **67.1%**. HBS is **30.2%** and **55.0%**.
+Even at the worst corner — highest public stumpage, cost +20%, fire no-salvage — the 2021 positive-margin share is **77.8%** and 2022 is **67.1%**. HBS is **30.2%** and **55.0%**.
 
-The positive pool is large enough to fill the 1.125M m³ five-year envelope in every 2021–2022
-combination. Actual harvest is far below that. The constraint is on the quantity side:
-mill demand, processing capacity, contractor availability, or operational access.
+The positive pool is large enough to fill the 1.125M m³ five-year envelope in every 2021–2022 combination. Actual harvest is far below that. The constraint is on the quantity side: mill demand, processing capacity, contractor availability, or operational access.
 
 This is the strongest result in the model.
 
@@ -48,13 +44,11 @@ This is the strongest result in the model.
 - 2019: positive share **0.0–47.9%** against HBS **49.1%**.
 - 2025: positive share **0.0–85.2%** against HBS **83.4%**.
 
-Both can fit at the low-stumpage corner and fail at the high-stumpage corner. The public data
-do not pin down the realized stumpage/market combination. The model reports the range.
+Both can fit at the low-stumpage corner and fail at the high-stumpage corner. The public data do not pin down the realized stumpage/market combination. The model reports the range.
 
 ### 2023–2024 stay wide
 
-2023 is **0–83.4%** and 2024 is **0–79.9%**. These years need TSA-specific billed stumpage and
-dated mill demand to narrow.
+2023 is **0–83.4%** and 2024 is **0–79.9%**. These years need TSA-specific billed stumpage and dated mill demand to narrow.
 
 ## Interpretation
 

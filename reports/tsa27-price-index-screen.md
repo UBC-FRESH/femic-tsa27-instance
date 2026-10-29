@@ -1,21 +1,14 @@
 # TSA 27 BC interior price-index screen
 
-**Status:** public BC interior lumber-price sensitivity, 29 October 2026.
-**Not a mill-gate log-price series and not a causal attribution.**
+**Status:** public BC interior lumber-price sensitivity, 29 October 2026. **Not a mill-gate log-price series and not a causal attribution.**
 
 ## Purpose
 
-The year-by-year screen held prices and costs static. This report adds the BC Timber Pricing
-Branch **Interior lumber AMV** for zone 7 (Southern Interior), and asks whether price alone can
-reproduce the HBS harvest path.
+The year-by-year screen held prices and costs static. This report adds the BC Timber Pricing Branch **Interior lumber AMV** for zone 7 (Southern Interior), and asks whether price alone can reproduce the HBS harvest path.
 
 ## BC interior AMV index
 
-The source is the monthly BC Timber Pricing Branch “Stumpage Appraisal Parameters (Interior)”
-memorandum. The zone 7 table gives lumber AMVs in dollars per thousand board feet. The index
-is a spruce-pine-fir composite: the mean of balsam, fir/hemlock, lodgepole pine, white pine,
-yellow pine, and spruce. Cedar and larch are excluded so the index tracks the TSA 27 softwood
-mix rather than high-value cedar.
+The source is the monthly BC Timber Pricing Branch “Stumpage Appraisal Parameters (Interior)” memorandum. The zone 7 table gives lumber AMVs in dollars per thousand board feet. The index is a spruce-pine-fir composite: the mean of balsam, fir/hemlock, lodgepole pine, white pine, yellow pine, and spruce. Cedar and larch are excluded so the index tracks the TSA 27 softwood mix rather than high-value cedar.
 
 | Year | Months | SPF composite $/MBF | Factor vs 2026 |
 |---:|---:|---:|---:|
@@ -30,13 +23,11 @@ mix rather than high-value cedar.
 | 2025 | 10 | 562.45 | 1.224 |
 | 2026 | 10 | 459.43 | 1.000 |
 
-The 2017 and 2025 rows use the months available at the linked historical pages; the 2026 row
-is year-to-date. The monthly table is in `config/operational/bc_interior_amv_monthly.csv`.
+The 2017 and 2025 rows use the months available at the linked historical pages; the 2026 row is year-to-date. The monthly table is in `config/operational/bc_interior_amv_monthly.csv`.
 
 ## Results
 
-Revenue is scaled by the annual AMV factor. Stumpage stays at the flat CAD 20/m³ in the main
-price-only case.
+Revenue is scaled by the annual AMV factor. Stumpage stays at the flat CAD 20/m³ in the main price-only case.
 
 | Year | HBS / AAC | AMV factor | Price-only positive | Price-only share |
 |---:|---:|---:|---:|---:|
@@ -53,8 +44,7 @@ price-only case.
 
 ## Stumpage table sensitivity
 
-The Interior Appraisal Manual Table 6-1 gives South East zone average sawlog stumpage rates.
-TSA 27 (Selkirk) is in the South East zone. The observed points are:
+The Interior Appraisal Manual Table 6-1 gives South East zone average sawlog stumpage rates. TSA 27 (Selkirk) is in the South East zone. The observed points are:
 
 | Year | South East average stumpage | Status |
 |---:|---:|---|
@@ -83,14 +73,9 @@ Substituting these rates for the flat CAD 20/m³ produces an erratic path:
 | 2025 | 83.4% | 47.10 | 27.0% |
 | 2026 | 47.6% | 12.76 | 73.0% |
 
-This is not a usable central case. The tabular average sawlog rate is **not the same as
-stumpage actually billed** on TSA 27 cutting authorities. It varies by tenure, appraisal, and
-species mix, and the 2023–2025 rows are held at the 2022 value. The table sensitivity shows
-that the screen is highly sensitive to stumpage, not that the tabular series is the right
-input.
+This is not a usable central case. The tabular average sawlog rate is **not the same as stumpage actually billed** on TSA 27 cutting authorities. It varies by tenure, appraisal, and species mix, and the 2023–2025 rows are held at the 2022 value. The table sensitivity shows that the screen is highly sensitive to stumpage, not that the tabular series is the right input.
 
-The model keeps the flat CAD 20/m³ as the central assumption until a TSA 27 billed-stumpage
-series is available.
+The model keeps the flat CAD 20/m³ as the central assumption until a TSA 27 billed-stumpage series is available.
 
 ## Findings
 
@@ -104,13 +89,9 @@ This is a much better directional fit than the U.S. PPI, especially for 2025.
 
 ### Price still cannot explain 2021–2023
 
-The 2021 AMV is the highest in the series at **1.978×** the 2026 level. The price-only screen
-puts **95.4%** of the UWR pool in positive margin. Actual HBS is the lowest year at **30.2%**.
-2022 and 2023 show the same mismatch.
+The 2021 AMV is the highest in the series at **1.978×** the 2026 level. The price-only screen puts **95.4%** of the UWR pool in positive margin. Actual HBS is the lowest year at **30.2%**. 2022 and 2023 show the same mismatch.
 
-That is the signature of a **quantity/processing constraint**, not a price constraint. A
-high-price year with low harvest requires mill demand, processing capacity, contractor
-availability, or operational access to be binding.
+That is the signature of a **quantity/processing constraint**, not a price constraint. A high-price year with low harvest requires mill demand, processing capacity, contractor availability, or operational access to be binding.
 
 ### 2019 is the one year where price and policy align
 
@@ -120,21 +101,15 @@ In 2019:
 - UWR u-3-005 expands by 10,601 ha;
 - HBS falls from 92.8% to 49.1%.
 
-The combination is consistent with a price/margin shock amplified by the legal land-base step.
-It still does not explain the full 47% one-year drop.
+The combination is consistent with a price/margin shock amplified by the legal land-base step. It still does not explain the full 47% one-year drop.
 
 ### The stumpage table is a warning, not a fit
 
-The South East average sawlog table swings from 31.52 to 55.22 $/m³ and back to 12.76 $/m³.
-It does not produce a stable or credible annual screen. That is a data problem: the model
-needs stumpage actually billed on TSA 27 cutting authorities, not the zone-average table.
+The South East average sawlog table swings from 31.52 to 55.22 $/m³ and back to 12.76 $/m³. It does not produce a stable or credible annual screen. That is a data problem: the model needs stumpage actually billed on TSA 27 cutting authorities, not the zone-average table.
 
 ## Cross-check: U.S. PPI
 
-The earlier U.S. softwood-lumber PPI (`WPU0811`) gave a similar 2021 mismatch but a much worse
-2025 fit: 0.942 price factor and 39.6% positive share against 83.4% actual. The BC AMV is the
-preferred index because it is the actual BC interior appraisal input. The U.S. series remains
-in `config/operational/softwood_lumber_price_index.csv` as a cross-check.
+The earlier U.S. softwood-lumber PPI (`WPU0811`) gave a similar 2021 mismatch but a much worse 2025 fit: 0.942 price factor and 39.6% positive share against 83.4% actual. The BC AMV is the preferred index because it is the actual BC interior appraisal input. The U.S. series remains in `config/operational/softwood_lumber_price_index.csv` as a cross-check.
 
 ## Interpretation
 
@@ -151,8 +126,7 @@ The BC AMV screen is a falsification test, not a fit. It shows that:
 - The SPF composite is an unweighted species mean, not the TSA 27 species mix.
 - 2017 uses 7 months, 2025 uses 10 months, and 2026 is year-to-date.
 - The base CAD 95/m³ sawlog and CAD 45/m³ pulp prices are placeholders.
-- Stumpage is a flat CAD 20/m³; the indexed case is a sensitivity, not an average sawlog
-  stumpage table.
+- Stumpage is a flat CAD 20/m³; the indexed case is a sensitivity, not an average sawlog stumpage table.
 - Mill capacity, product acceptance, and curtailments are not applied.
 - The screen is a filter, not a schedule.
 
@@ -169,7 +143,6 @@ The BC AMV screen is a falsification test, not a fit. It shows that:
 
 ## Next
 
-1. Parse the Interior Non-Appraised Tabular Stumpage Rates for zone 7 and build an average
-   sawlog-stumpage series.
+1. Parse the Interior Non-Appraised Tabular Stumpage Rates for zone 7 and build an average sawlog-stumpage series.
 2. Add dated mill demand and curtailment events.
 3. Run the nested counterfactuals with the BC AMV as the market switch.

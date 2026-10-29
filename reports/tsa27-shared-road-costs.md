@@ -1,29 +1,19 @@
 # TSA 27 shared-road build and maintenance costs
 
-**Status:** structural shared-road screen, 29 October 2026.
-**Not a schedule, not an AAC, and not a historical attribution.**
+**Status:** structural shared-road screen, 29 October 2026. **Not a schedule, not an AAC, and not a historical attribution.**
 
 ## Purpose
 
-The earlier full-estate screen charged every block a synthetic **one-road-per-block**
-allowance: CAD 25,000 build plus five years of CAD 2,500 maintenance. That placeholder
-ignored both the existing road network and the fact that neighbouring blocks share roads.
-This report replaces it with the actual DRA route segments each block uses, a new-access
-spur to the nearest truck-legal road, and maintenance allocated across all blocks that use
-the same segment.
+The earlier full-estate screen charged every block a synthetic **one-road-per-block** allowance: CAD 25,000 build plus five years of CAD 2,500 maintenance. That placeholder ignored both the existing road network and the fact that neighbouring blocks share roads. This report replaces it with the actual DRA route segments each block uses, a new-access spur to the nearest truck-legal road, and maintenance allocated across all blocks that use the same segment.
 
 ## What changed
 
-- Routes are the all-DRA WS4 least-cost routes. The strict truck-legal filter used for the
-  45-block pilot fragments the full network and produces 20–90 km artificial connectors for
-  44% of the estate, so it is not used for the full screen.
+- Routes are the all-DRA WS4 least-cost routes. The strict truck-legal filter used for the 45-block pilot fragments the full network and produces 20–90 km artificial connectors for 44% of the estate, so it is not used for the full screen.
 - Each route is decomposed into its DRA segments.
 - A block-to-road connector is priced as a new spur.
 - Existing DRA segments carry maintenance only; no second build charge is applied.
-- Resource-road maintenance is shared by all blocks that use the segment, weighted by
-  block volume.
-- The 0.2% of routes that use trail/overgrown/decommissioned linework are flagged and carry
-  a shared re-opening charge.
+- Resource-road maintenance is shared by all blocks that use the segment, weighted by block volume.
+- The 0.2% of routes that use trail/overgrown/decommissioned linework are flagged and carry a shared re-opening charge.
 
 ## Network facts
 
@@ -55,8 +45,7 @@ segment_cost_5yr = length_km * maintenance_rate * 5 years
 block_share = segment_cost_5yr * block_volume / segment_user_volume
 ```
 
-The block road cost is the spur charge plus its share of every segment on its route. This
-avoids charging the same trunk road to every block.
+The block road cost is the spur charge plus its share of every segment on its route. This avoids charging the same trunk road to every block.
 
 ## Coefficients
 
@@ -68,9 +57,7 @@ avoids charging the same trunk road to every block.
 | Spur life | — | 20 years | — | Planning assumption |
 | Period | — | 5 years | — | Matches the five-year screen envelope |
 
-The build rate is anchored in public FERIC/FPInnovations cost work. The maintenance rate is
-an explicit assumption and should be replaced with a local road-maintenance contract rate
-when one is available.
+The build rate is anchored in public FERIC/FPInnovations cost work. The maintenance rate is an explicit assumption and should be replaced with a local road-maintenance contract rate when one is available.
 
 ## Results
 
@@ -88,10 +75,7 @@ Road-cost distribution, blocks with at least 100 m³:
 | Full | 5.73 $/m³ | 69.12 $/m³ | 7,927 $ | 37.6% |
 | UWR | 6.18 $/m³ | 68.15 $/m³ | 6,109 $ | 38.4% |
 
-The median is low because most blocks sit close to existing roads. The long right tail is the
-access constraint: a block with a multi-kilometre spur carries a large fixed charge. The
-blocks selected within the five-year envelope carry 1.29 $/m³ (full) and 1.72 $/m³ (UWR) of
-shared road cost, because the ranking favours blocks near the existing network.
+The median is low because most blocks sit close to existing roads. The long right tail is the access constraint: a block with a multi-kilometre spur carries a large fixed charge. The blocks selected within the five-year envelope carry 1.29 $/m³ (full) and 1.72 $/m³ (UWR) of shared road cost, because the ranking favours blocks near the existing network.
 
 ## Sensitivity
 
@@ -117,10 +101,7 @@ shared road cost, because the ranking favours blocks near the existing network.
 | UWR | Price −20% | 0.69M m³ | 5.0% |
 | UWR | Cost +20% | 1.34M m³ | 9.8% |
 
-The result is still dominated by price and cost. Shared-road accounting raises the
-positive-margin share relative to the one-road-per-block placeholder, because CAD 37,500 per
-block was too high for the many blocks close to existing roads. It also penalises remote
-blocks more sharply than the flat placeholder did.
+The result is still dominated by price and cost. Shared-road accounting raises the positive-margin share relative to the one-road-per-block placeholder, because CAD 37,500 per block was too high for the many blocks close to existing roads. It also penalises remote blocks more sharply than the flat placeholder did.
 
 ## Comparison with the placeholder
 
@@ -129,33 +110,23 @@ blocks more sharply than the flat placeholder did.
 | Full | 10.15M m³ | 41.9% | 12.74M m³ | 52.6% |
 | UWR | 6.03M m³ | 44.2% | 7.77M m³ | 56.9% |
 
-This is a cost-accounting change, not a new inventory or harvest constraint. It does not
-change the AAC or the caribou land base.
+This is a cost-accounting change, not a new inventory or harvest constraint. It does not change the AAC or the caribou land base.
 
 ## Interpretation
 
-1. Shared-road accounting makes the economic screen less punitive at the median, but the
-   long-spur tail remains a real access barrier.
-2. The UWR estate is not proportionally worse than the full estate in this screen; both are
-   around 53–57% positive before price and cost shocks.
-3. A 20% price reduction still removes almost all positive-margin volume. That fragility is
-   the mechanism most consistent with the post-2017 AAC-to-harvest gap.
-4. The screen is a static filter. It does not model road activation timing, cutblock
-   sequencing, or the cost of reopening a road for a single entry.
+1. Shared-road accounting makes the economic screen less punitive at the median, but the long-spur tail remains a real access barrier.
+2. The UWR estate is not proportionally worse than the full estate in this screen; both are around 53–57% positive before price and cost shocks.
+3. A 20% price reduction still removes almost all positive-margin volume. That fragility is the mechanism most consistent with the post-2017 AAC-to-harvest gap.
+4. The screen is a static filter. It does not model road activation timing, cutblock sequencing, or the cost of reopening a road for a single entry.
 
 ## Caveats
 
 - Maintenance is an assumption, not a TSA-27 contract rate.
-- Spurs are straight-line block-centroid-to-road distances. Terrain, wetlands, and stream
-  crossings are not costed.
-- The full screen uses all DRA linework for connectivity; 0.2% of routes use non-truck
-  segments and carry a re-opening charge.
-- Existing roads carry no build cost, which assumes they are already open. Road condition,
-  season, and deactivation status are not modelled.
-- Maintenance is allocated across all candidate users of a segment. If only the
-  positive-margin subset operates, the per-cubic-metre maintenance share rises.
-- Spurs are charged per block; adjacent blocks that could share one spur are not
-  consolidated.
+- Spurs are straight-line block-centroid-to-road distances. Terrain, wetlands, and stream crossings are not costed.
+- The full screen uses all DRA linework for connectivity; 0.2% of routes use non-truck segments and carry a re-opening charge.
+- Existing roads carry no build cost, which assumes they are already open. Road condition, season, and deactivation status are not modelled.
+- Maintenance is allocated across all candidate users of a segment. If only the positive-margin subset operates, the per-cubic-metre maintenance share rises.
+- Spurs are charged per block; adjacent blocks that could share one spur are not consolidated.
 - The two mills are notional public design-capacity destinations; no curtailment timing.
 - No species/grade prices, no stumpage by grade, no road activation timing.
 - The screen is a filter, not a schedule.
@@ -176,7 +147,6 @@ change the AAC or the caribou land base.
 
 ## Next
 
-1. Add re-opening and closure timing for existing shared roads; new-spur activation is now
-   modelled in the FHOPS pilot.
+1. Add re-opening and closure timing for existing shared roads; new-spur activation is now modelled in the FHOPS pilot.
 2. Add 2017–2026 road, fire, UWR, and cutblock snapshots.
 3. Attribute the historical ratio year by year against the shared-road cost surface.

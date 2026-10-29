@@ -1,8 +1,6 @@
 # TSA 27 caribou even-flow result
 
-**Status:** preliminary even-flow search result, 28 October 2026.
-**Not an AAC determination.**
-**Scenario:** S7 caribou / UWR no-harvest, 200-year horizon, 10-year periods.
+**Status:** preliminary even-flow search result, 28 October 2026. **Not an AAC determination.** **Scenario:** S7 caribou / UWR no-harvest, 200-year horizon, 10-year periods.
 
 ## Configuration
 
@@ -122,7 +120,7 @@ Those are different questions and different baselines. The even-flow result is m
 - Dataset: `build/compiled_uwr`
 - Scenario registry: `config/ws4/scenario_registry.yaml`
 - Related reports:
-  - `reports/tsa27-caribou-attribution.md`
-  - `reports/tsa27-interim-attribution.md`
-  - `reports/tsa27-operational-pilot.md`
+- `reports/tsa27-caribou-attribution.md`
+- `reports/tsa27-interim-attribution.md`
+- `reports/tsa27-operational-pilot.md`
 - Watcher frame supplied 2026-10-28; this report records the displayed result, not a saved run directory.

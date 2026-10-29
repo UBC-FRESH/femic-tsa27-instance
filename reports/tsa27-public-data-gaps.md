@@ -1,18 +1,13 @@
 # TSA 27 public-data gap register
 
-**Status:** public-data treatment register, 29 October 2026.
-**Principle:** use the best public data; where a series does not exist, carry a public range or
-a documented switch, not a proprietary gate.
+**Status:** public-data treatment register, 29 October 2026. **Principle:** use the best public data; where a series does not exist, carry a public range or a documented switch, not a proprietary gate.
 
 ## What was searched
 
 - BC Data Catalogue: no TSA-level stumpage-billed dataset.
-- BCTS quarterly and annual performance reports: business-area volume and provincial gross
-  revenue, but no area-specific billed-rate series.
-- Interior Appraisal Manual and monthly non-appraised tables: zone-average sawlog rates, not
-  TSA-27 billed rates.
-- Local news, company listings, BC Major Timber Processing Facilities 2019/2022/2023: one
-  dated Downie event, no 2024–2026 local curtailment series.
+- BCTS quarterly and annual performance reports: business-area volume and provincial gross revenue, but no area-specific billed-rate series.
+- Interior Appraisal Manual and monthly non-appraised tables: zone-average sawlog rates, not TSA-27 billed rates.
+- Local news, company listings, BC Major Timber Processing Facilities 2019/2022/2023: one dated Downie event, no 2024–2026 local curtailment series.
 - BCWS fire perimeters: perimeters available; severity and salvage not.
 
 ## Treatment
@@ -32,16 +27,12 @@ a documented switch, not a proprietary gate.
 
 The public-data envelope shows where the answer is robust and where it is not:
 
-- **2021 and 2022:** positive share is 88–96% and 87–96% across every public price/stumpage
-  anchor, against HBS 30.2% and 55.0%. The quantity/processing conclusion survives the full
-  public range.
-- **2019 and 2025:** the range spans the observed harvest, so those years are not uniquely
-  identified without billed stumpage.
+- **2021 and 2022:** positive share is 88–96% and 87–96% across every public price/stumpage anchor, against HBS 30.2% and 55.0%. The quantity/processing conclusion survives the full public range.
+- **2019 and 2025:** the range spans the observed harvest, so those years are not uniquely identified without billed stumpage.
 - **Fire:** under 1% of annual operable volume.
 - **Mill volume:** one mill is still 2.10× AAC.
 
-That is the honest public-data result: a firm mechanism where the range is narrow, and a
-range where the data are weak.
+That is the honest public-data result: a firm mechanism where the range is narrow, and a range where the data are weak.
 
 ## Files
 

@@ -1,14 +1,10 @@
 # TSA 27 analysis and scenario register
 
-**Status:** coverage map, 29 October 2026.
-**Purpose:** say exactly which analyses have a detailed note, which are only summarised, and
-which are still missing. This is the answer to “are all scenarios and analyses documented?”
+**Status:** coverage map, 29 October 2026. **Purpose:** say exactly which analyses have a detailed note, which are only summarised, and which are still missing. This is the answer to “are all scenarios and analyses documented?”
 
 ## Short answer
 
-No — not all. Every analysis that has actually been run has a report or a detailed section,
-and every scenario that could not be run has an explicit reason. The remaining gaps are listed
-at the end and are not hidden inside a single netdown.
+No — not all. Every analysis that has actually been run has a report or a detailed section, and every scenario that could not be run has an explicit reason. The remaining gaps are listed at the end and are not hidden inside a single netdown.
 
 ## Strategic and evidence analyses
 
@@ -38,9 +34,7 @@ at the end and are not hidden inside a single netdown.
 | S7 Max even-flow, UWR no-harvest | Run | `reports/tsa27-caribou-evenflow-result.md` | 200-year, 10-year periods; preliminary |
 | S8 Max even-flow, no caribou | Run | `reports/tsa27-caribou-evenflow-result.md` | Same targets; preliminary |
 
-S7/S8 target files are `config/ws4/targets/evenflow_caribou.yaml` and
-`evenflow_no_caribou.yaml`. The run plans are in `runs/s7_evenflow_caribou/plan.txt` and
-`runs/s8_evenflow_no_caribou/plan.txt`.
+S7/S8 target files are `config/ws4/targets/evenflow_caribou.yaml` and `evenflow_no_caribou.yaml`. The run plans are in `runs/s7_evenflow_caribou/plan.txt` and `runs/s8_evenflow_no_caribou/plan.txt`.
 
 ## Operational and economic analyses
 
@@ -68,33 +62,21 @@ S7/S8 target files are `config/ws4/targets/evenflow_caribou.yaml` and
 
 These are **not** documented as completed analyses because they have not been run:
 
-1. **Current mill operating status and curtailments.** Downie/Selkirk is active; Eagle River
-   is unverified and absent from recent major-mill lists. No dated curtailment series exists.
-2. **Re-opening and closure timing for existing shared roads.** New-spur activation is in the
-   pilot; existing shared roads are still assumed open.
-3. **Full WS4 recompile with the 2019 UWR expansion removed.** The year-by-year screen uses a
-   reduced-form add-back, not a historical WS4 dataset.
-4. **Burn severity, salvage eligibility, and post-fire recovery.** Fire is a perimeter overlap
-   only.
-5. **Dated price, stumpage, and contractor-cost series.** BC interior lumber AMV, a South East
-   average sawlog-stumpage table sensitivity, and BCTS South Interior harvest rates for
-   2023/24-2024/25 exist; a TSA-27 billed-stumpage series and contractor-cost series do not.
-6. **Machine, labour, and landing capacity.** FHOPS uses a capacity envelope, not a full
-   machine schedule.
-7. **Nested counterfactuals for no access and no mill capacity.** No-caribou, fire,
-   price/cost, and one-mill pilot counterfactuals exist; a full no-access screen and a
-   mill-capacity-constrained whole-TSA run do not.
+1. **Current mill operating status and curtailments.** Downie/Selkirk is active; Eagle River is unverified and absent from recent major-mill lists. No dated curtailment series exists.
+2. **Re-opening and closure timing for existing shared roads.** New-spur activation is in the pilot; existing shared roads are still assumed open.
+3. **Full WS4 recompile with the 2019 UWR expansion removed.** The year-by-year screen uses a reduced-form add-back, not a historical WS4 dataset.
+4. **Burn severity, salvage eligibility, and post-fire recovery.** Fire is a perimeter overlap only.
+5. **Dated price, stumpage, and contractor-cost series.** BC interior lumber AMV, a South East average sawlog-stumpage table sensitivity, and BCTS South Interior harvest rates for 2023/24-2024/25 exist; a TSA-27 billed-stumpage series and contractor-cost series do not.
+6. **Machine, labour, and landing capacity.** FHOPS uses a capacity envelope, not a full machine schedule.
+7. **Nested counterfactuals for no access and no mill capacity.** No-caribou, fire, price/cost, and one-mill pilot counterfactuals exist; a full no-access screen and a mill-capacity-constrained whole-TSA run do not.
 8. **Historical block roll-back.** Current WS4 blocks are used for every year.
-9. **Validation against TSR5 results.** The 2022 base case and core/matrix results are
-   unpublished.
+9. **Validation against TSR5 results.** The 2022 base case and core/matrix results are unpublished.
 
 ## How to read the notes
 
-- A **detailed note** means the report states the method, inputs, results, sensitivity, and
-  caveats.
+- A **detailed note** means the report states the method, inputs, results, sensitivity, and caveats.
 - A **summary only** item is a table inside another report, not a standalone analysis.
-- An **explicit gap** is a scenario that was not run. The reason is stated; it is not a silent
-  omission.
+- An **explicit gap** is a scenario that was not run. The reason is stated; it is not a silent omission.
 
 ## Files
 
