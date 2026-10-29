@@ -82,9 +82,33 @@ The raw TSR PDFs and the extracted full text are ignored by git. Only the docume
 ## Data policy
 
 - Public repository: code, docs, derived tables, and short evidence excerpts.
-- Raw provincial data and TSR PDFs: fetched at runtime into ignored paths, never committed.
-- The shared public-data mirror is `femic/external/femic-public-data/data` in a FEMIC checkout; set `FEMIC_EXTERNAL_DATA_ROOT` to its `data` directory.
+- Raw provincial data and TSR PDFs: fetched at runtime; public downloads are
+  DataLad-annexed, not ordinary Git blobs.
+- The shared public-data mirror is `femic/external/femic-public-data/data` in a
+  FEMIC checkout; set `FEMIC_EXTERNAL_DATA_ROOT` to its `data` directory.
 - Do not commit credentials, personal paths, or unpublished documents.
+
+## DataLad layout
+
+This is a DataLad dataset (`.datalad/config`, dataset id
+`307a58dd-7023-42b3-aa8c-b7267215bbc0`).  The canonical checkout is
+`femic/external/femic-tsa27-instance`; the top-level
+`ws4/femic-tsa27-instance` path is a symlink to it.
+
+Public source downloads under `data/downloads/bc/` are annexed with
+`MD5E`; they are not committed as Git blobs and are available from the local
+annex on the machine that created the dataset.  The Arbutus S3 special remote
+is not initialized yet because this environment has no bucket/credentials;
+use the FEMIC `public-data-mirror-runbook` once those are available, with a
+bucket such as `ubc-fresh-femic-tsa27-instance`.
+
+Typical checks:
+
+```bash
+datalad status
+git annex whereis data/downloads/bc/roads.geojson
+git annex get data/downloads/bc/roads.geojson
+```
 
 ## Cross-links
 
