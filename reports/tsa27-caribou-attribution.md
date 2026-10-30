@@ -19,11 +19,11 @@ The comparison is a **first-period capacity comparison**:
 
 | Scenario | Harvest at offset 0 | Treated area |
 |---|---:|---:|
-| `s3_tsr5_base` | 13,660,939 m³ | 57,941 ha |
+| `s3_tsr5_base` | 13,674,669 m³ | 57,962 ha |
 | `s6_no_caribou` | 24,218,812 m³ | 79,102 ha |
-| **UWR effect** | **−10,557,873 m³ (−43.6%)** | **−21,160 ha (−26.8%)** |
+| **UWR effect** | **−10,544,142 m³ (−43.5%)** | **−21,140 ha (−26.7%)** |
 
-The UWR filter removed 1,940 of 8,107 scheduled block rows.
+The UWR filter removed 1,937 of 8,107 scheduled block rows. The 132 ambiguous `(AU, area, age)` pairs are resolved by geometry, so the block flags match the 8,029 flagged fragments.
 
 This shows that the legal UWR no-harvest footprint is a very large first-order constraint in the current WS4 dataset. It is **not** an AAC impact: the schedules harvest all eligible blocks at year 0, and there is no multi-rotation harvest-flow optimization.
 

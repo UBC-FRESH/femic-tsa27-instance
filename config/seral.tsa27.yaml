@@ -1,0 +1,30 @@
+# TSA 27 seral-stage boundaries for the FEMIC Patchworks export.
+#
+# These are the TSR age-class boundaries, not the FEMIC default CMAI/peak-yield
+# boundaries:
+#   - mature    = age class 8+ (>=140 years)
+#   - overmature = age class 9+ (>=250 years)
+#
+# The TSR3/TSR4 seral targets are expressed against these two classes:
+#   40% of the forested area >=140 years, and at least one quarter of those
+#   (10% of the total) >=250 years below the caribou line; 70% >=140 above it.
+#
+# Use with:
+#   femic export patchworks ... --seral-stage-config config/seral.tsa27.yaml
+
+default:
+  regenerating:
+    min_age: 0
+    max_age: 5
+  young:
+    min_age: 6
+    max_age: 25
+  immature:
+    min_age: 26
+    max_age: 139
+  mature:
+    min_age: 140
+    max_age: 249
+  overmature:
+    min_age: 250
+    max_age: null

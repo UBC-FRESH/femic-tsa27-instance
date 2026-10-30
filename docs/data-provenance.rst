@@ -11,8 +11,15 @@ Public data sources
   package on the ``www2.gov.bc.ca`` asset path.
 - VRI 2025, TSA boundaries, site productivity, BEC, UWR, landscape units, OGMA/MOGMA, roads,
   and cutblocks: BC Geographic Warehouse layers, as listed in the model-building plan.
-- Core and matrix caribou habitat: provincial caribou recovery program layers.
+- Core and matrix caribou habitat: provincial caribou recovery program layers. The BC Data
+  Catalogue matches are boreal caribou layers for the Peace Region, not the southern mountain
+  caribou recovery layer for TSA 27, so this input remains request-only.
 - Caribou herd ranges: provincial caribou herd locations.
+
+BEC Map was fetched on 2026-10-30 (543 features, SHA-256 ``100f14e1…``) and cross-checked
+against the VRI BEC attributes: 19,390 of 19,701 fragments with both variants match (98.42%).
+The retrieval command, digest, and cross-check are in
+``notes/reference/tsa27-input-availability.md``.
 
 Storage
 -------

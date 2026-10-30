@@ -1,22 +1,51 @@
 schema_version: 1
 case: tsa27
-build_command: ws4 build --xml output/patchworks/forestmodel.xml --fragments output/patchworks/fragments/fragments.shp
-  --out build/compiled
+build_command: >-
+  femic export patchworks --tsa 27 --bundle-dir data/model_input_bundle
+  --checkpoint data/vri_vclr1p_checkpoint8.feather --output-dir output/patchworks
+  --start-year 2026 --horizon-years 300 --seral-stage-config config/seral.tsa27.yaml
+  && ws4 build --xml output/patchworks/forestmodel.xml
+  --fragments output/patchworks/fragments/fragments.shp --out build/compiled
 sources:
   forestmodel_xml:
     path: output/patchworks/forestmodel.xml
-    sha256: 88a029aea18c3493b3993bd328e9a2722055dd086d74da473ff8e2c66ddb4c15
+    sha256: 8177231768e8bb7ce08793b5aa91c83469fc7f7ba8f2c92b30b9b35c1424a5f0
   fragments_shp:
     path: output/patchworks/fragments/fragments.shp
     sha256: b1ddbec0becb032b84993d1aa04063bd76e6348e0906e0d2a4f0b09a20dd823e
+  seral_stage_config:
+    path: config/seral.tsa27.yaml
+    sha256: 42537ee5cfe6c7647616ec3f2193cd3c5e1d2dbac5e85037600b5d95e495429e
 tables:
   fragments: 40660
   tracks: 4746
-  curves: 7973
-  features: 54510
-  products: 33579
+  curves: 12545
+  features: 101970
+  products: 48579
   treatments: 3000
-  accounts: 94
+  accounts: 279
+variant:
+  path: build/compiled_uwr
+  source_forestmodel_sha256: 88a029aea18c3493b3993bd328e9a2722055dd086d74da473ff8e2c66ddb4c15
+  note: built from the pre-seral XML; rebuild with the C3 seral config is pending
+zone_variant:
+  path: build/compiled_zone
+  source_dataset: build/compiled
+  cloned_tracks: 10600
+  zones: [other, uwr]
+  lubec_count: 135
+  summary: metadata/ws4/zone_partition_summary.csv
+  invariants: metadata/ws4/zone_partition_invariants.csv
+  no_harvest:
+    path: build/compiled_zone_uwr
+    zones: [uwr]
+    inoperable_tracks: 3251
+    note: full 8,107-row schedule reproduces the filtered 13,674,669.395 m3 harvest
+  seral_targets:
+    path: config/ws4/targets/s3_seral_40_10.yaml
+    targets: 5400
+    accounts: 270
+  note: UWR x LU/BEC post-compile split; core and matrix tracks are pending the layer
 base_run:
   schedule: scenarios/s3_base.schedule.csv
   years: 250

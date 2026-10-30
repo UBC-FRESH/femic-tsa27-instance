@@ -17,7 +17,7 @@ Haul distance is not straight-line. The screen uses `route_distances_*_all.csv`,
 The full screen uses the all-DRA network because the strict truck-legal filter fragments the network and creates artificial 20–90 km connectors for 44% of the estate. The strict filter is retained for the 45-block pilot. In the full screen, 99.8% of routes are fully truck-legal and the remaining 0.2% are flagged and charged a re-opening cost.
 
 - 22,084 DRA features in the TSA 27 bounding box.
-- 8,107 full-dataset blocks and 6,167 UWR blocks routed.
+- 8,107 full-dataset blocks and 6,170 UWR blocks routed.
 - Median route to Revelstoke: about 47.4 km (full) and 43.2 km (UWR).
 - Median route to Malakwa: about 79.5 km (full) and 74.9 km (UWR).
 - Block-to-road connector is included in the route total.

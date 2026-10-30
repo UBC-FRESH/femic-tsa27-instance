@@ -1,10 +1,10 @@
 entries:
   bec_v12:
-    detail: to_fetch; see fetch_command or note
-    file_count: 0
-    sha256: ''
-    size_bytes: 0
-    status: pending
+    detail: local:data/downloads/bc/WHSE_FOREST_VEGETATION_BEC_BIOGEOCLIMATIC_POLY/WHSE_FOREST_VEGETATION_BEC_BIOGEOCLIMATIC_POLY.geojson
+    file_count: 1
+    sha256: 100f14e1ab97ababe2d8dd06caf431c38f1d6e9da6e099de6eafb1b74abaa6c6
+    size_bytes: 190795289
+    status: present
   caribou_core_matrix:
     detail: to_fetch; see fetch_command or note
     file_count: 0
@@ -71,4 +71,4 @@ entries:
     sha256: a5a02ac644bb411fa8799f7f4c96e77ae2d7fb11dcca9e49b681f4dce2861587
     size_bytes: 1763666458
     status: present
-generated_utc: '2026-10-27T20:26:39.959029+00:00'
+generated_utc: '2026-10-30T05:36:24.248437+00:00'

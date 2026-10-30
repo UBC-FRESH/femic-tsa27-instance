@@ -42,7 +42,7 @@ The TSR record gives quantitative caribou sensitivities:
 - TSR2 1999 analog, removing all caribou guidelines: **+8.2% long-term**.
 - TSR5 2022 gives a much larger legal UWR footprint: **116,820 ha gross / 62,892 ha net**, 29.1% of AFLB, but the 2022 AAC and base case are not published.
 
-The current WS4 first-period capacity result — UWR harvest down 43.6% — is **not** an AAC result. It removes the entire UWR footprint and uses a legacy THLB of 79,102 ha versus the TSR5 preliminary 51,454 ha.
+The current WS4 first-period capacity result — UWR harvest down 43.5% — is **not** an AAC result. It removes the entire UWR footprint and uses a legacy THLB of 79,102 ha versus the TSR5 preliminary 51,454 ha.
 
 A defensible interim statement: caribou policy plausibly explains **roughly 5–15% of AAC** based on the published TSR4/TSR2 sensitivities, with an unquantified additional effect from the larger 2022 UWR/core/matrix direction. That is not enough to explain a 40–60 percentage point collapse in the harvest ratio.
 

@@ -40,6 +40,8 @@ data/bc/
 data/downloads/*
 !data/downloads/bc/
 !data/downloads/bc/**
+# Local 190 MB WFS extract; annex it before changing this rule.
+data/downloads/bc/WHSE_FOREST_VEGETATION_BEC_BIOGEOCLIMATIC_POLY/
 data/tsr/
 reference/tsr_pdfs/
 reference/tsr_fulltext/

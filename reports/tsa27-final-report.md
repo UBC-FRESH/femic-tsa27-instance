@@ -22,15 +22,15 @@ Key findings:
 | Stage | Result |
 |---|---|
 | FEMIC input bundle | 37,463 stands; 6,439 THLB stands; 79,102 ha THLB; 18 AUs; 1,008 curves; 0 TIPSY errors |
-| WS4 dataset | 40,660 fragments; 4,746 tracks; 54,510 features; 33,579 products; 94 accounts |
-| UWR filter | 108,458 ha flagged; 8,029 fragments; 1,940 of 8,107 schedule rows excluded |
+| WS4 dataset | 40,660 fragments; 4,746 tracks; 101,970 features; 48,579 products; 279 accounts; 95 `feature.Seral.*` labels |
+| UWR filter | 108,458 ha flagged; 8,029 fragments; 1,937 of 8,107 schedule rows excluded |
 
 ## Results
 
 | Scenario | Harvest at offset 0 | Treated | Δ harvest vs no caribou |
 |---|---:|---:|---:|
 | `s6_no_caribou` | 24,218,812 m³ | 79,102 ha | — |
-| `s3_tsr5_base` (UWR no-harvest) | 13,660,939 m³ | 57,941 ha | **−10,557,873 m³ (−43.6%)** |
+| `s3_tsr5_base` (UWR no-harvest) | 13,674,669 m³ | 57,962 ha | **−10,544,142 m³ (−43.5%)** |
 
 This is a **first-period capacity comparison**, not an AAC. The schedules harvest all eligible blocks at year 0. The UWR no-harvest footprint is a large first-order constraint in this dataset.
 

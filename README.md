@@ -24,9 +24,9 @@ Phase P0 is complete and Phase P1 is complete and Phase P2 is complete and Phase
 | Scenario | Harvest at offset 0 | Treated |
 |---|---:|---:|
 | `s6_no_caribou` | 24,218,812 m³ | 79,102 ha |
-| `s3_tsr5_base` (UWR no-harvest) | 13,660,939 m³ | 57,941 ha |
+| `s3_tsr5_base` (UWR no-harvest) | 13,674,669 m³ | 57,962 ha |
 
-The UWR no-harvest filter reduces first-period harvest capacity by **43.6%**. This is capacity, not AAC; the multi-rotation AAC optimization is the next modelling step. Full report: [`reports/tsa27-final-report.md`](reports/tsa27-final-report.md).
+The UWR no-harvest filter reduces first-period harvest capacity by **43.5%**. This is capacity, not AAC; the multi-rotation AAC optimization is the next modelling step. Full report: [`reports/tsa27-final-report.md`](reports/tsa27-final-report.md).
 
 ## Evidence base
 

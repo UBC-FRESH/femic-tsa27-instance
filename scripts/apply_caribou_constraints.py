@@ -25,9 +25,41 @@ DEFAULT_FRAGMENTS: Path = ROOT / "data" / "ws4" / "fragments.gpkg"
 DEFAULT_EXPORT: Path = ROOT / "output" / "patchworks" / "fragments" / "fragments.shp"
 DEFAULT_OUT: Path = ROOT / "scenarios" / "s3_base_caribou_uwr_excluded.schedule.csv"
 DEFAULT_SUMMARY: Path = ROOT / "metadata" / "ws4" / "caribou_schedule_filter.csv"
+DEFAULT_OVERRIDES: Path = ROOT / "metadata" / "ws4" / "block_fragment_overrides.csv"
 
 
-def block_flags(export: gpd.GeoDataFrame, fragments: gpd.GeoDataFrame) -> pd.DataFrame:
+def load_overrides(path: Path) -> pd.DataFrame | None:
+    """Load the geometry-resolved block-to-fragment overrides.
+
+    Parameters
+    ----------
+    path : Path
+        Override CSV with ``block_id`` and ``fragment_id``.
+
+    Returns
+    -------
+    pandas.DataFrame or None
+        The override rows, or ``None`` when the file does not exist.
+
+    Raises
+    ------
+    ValueError
+        When the file exists but is missing a required column.
+    """
+    if not path.is_file():
+        return None
+    frame = pd.read_csv(path)
+    required = {"block_id", "fragment_id"}
+    if not required.issubset(frame.columns):
+        raise ValueError(f"{path} must carry {sorted(required)}")
+    return frame.loc[:, ["block_id", "fragment_id"]]
+
+
+def block_flags(
+    export: gpd.GeoDataFrame,
+    fragments: gpd.GeoDataFrame,
+    overrides: pd.DataFrame | None = None,
+) -> pd.DataFrame:
     """Map exported block ids to the P3.1 UWR flag.
 
     Parameters
@@ -35,12 +67,21 @@ def block_flags(export: gpd.GeoDataFrame, fragments: gpd.GeoDataFrame) -> pd.Dat
     export : geopandas.GeoDataFrame
         Patchworks fragments with ``FRAGMENT_I``, ``BLOCK``, ``AU``, ``AREA_HA``, ``F_AGE``.
     fragments : geopandas.GeoDataFrame
-        P3.1 fragments with ``au``, ``area_ha``, ``PROJ_AGE_1``, ``caribou_uwr``.
+        P3.1 fragments with ``FEATURE_ID``, ``au``, ``area_ha``, ``PROJ_AGE_1``,
+        ``caribou_uwr``.
+    overrides : pandas.DataFrame or None, optional
+        Geometry-resolved ``block_id``/``fragment_id`` pairs. When given, they
+        replace the key-matched candidates for those blocks.
 
     Returns
     -------
     pandas.DataFrame
         One row per block with ``block_id`` and ``caribou_uwr``.
+
+    Raises
+    ------
+    ValueError
+        When an override block is not present in the export or in the key join.
     """
     left = pd.DataFrame(
         {
@@ -52,6 +93,7 @@ def block_flags(export: gpd.GeoDataFrame, fragments: gpd.GeoDataFrame) -> pd.Dat
     )
     right = pd.DataFrame(
         {
+            "fragment_id": fragments["FEATURE_ID"].astype(int),
             "au": fragments["au"].astype(int),
             "area_key": fragments["area_ha"].astype(float).round(3),
             "age_key": fragments["PROJ_AGE_1"].astype(float).round(0),
@@ -59,6 +101,17 @@ def block_flags(export: gpd.GeoDataFrame, fragments: gpd.GeoDataFrame) -> pd.Dat
         }
     )
     merged = left.merge(right, on=["au", "area_key", "age_key"], how="left")
+    if overrides is not None and not overrides.empty:
+        chosen = overrides.set_index("block_id")["fragment_id"].astype(int)
+        unknown = set(chosen.index) - set(merged["block_id"])
+        if unknown:
+            raise ValueError(f"override blocks absent from the export: {sorted(unknown)[:5]}")
+        in_override = merged["block_id"].isin(chosen.index)
+        keep = (~in_override) | (merged["fragment_id"] == merged["block_id"].map(chosen))
+        merged = merged.loc[keep]
+        missing = set(chosen.index) - set(merged["block_id"])
+        if missing:
+            raise ValueError(f"override fragments absent from the key join: {sorted(missing)[:5]}")
     merged["caribou_uwr"] = merged["caribou_uwr"].fillna(0).astype(int)
     dataframe = pd.DataFrame(merged.groupby("block_id", as_index=False)[["caribou_uwr"]].max())
     return dataframe.sort_values("block_id").reset_index(drop=True)
@@ -103,11 +156,13 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument("--export", type=Path, default=DEFAULT_EXPORT)
     parser.add_argument("--out", type=Path, default=DEFAULT_OUT)
     parser.add_argument("--summary", type=Path, default=DEFAULT_SUMMARY)
+    parser.add_argument("--overrides", type=Path, default=DEFAULT_OVERRIDES)
     args = parser.parse_args(argv)
     schedule = pd.read_csv(args.schedule)
     export = gpd.read_file(args.export)
     fragments = gpd.read_file(args.fragments)
-    flags = block_flags(export, fragments)
+    overrides = load_overrides(args.overrides)
+    flags = block_flags(export, fragments, overrides)
     filtered = filter_schedule(schedule, flags)
     args.out.parent.mkdir(parents=True, exist_ok=True)
     filtered.to_csv(args.out, index=False)

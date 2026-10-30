@@ -102,7 +102,7 @@ This result should also be compared against the TSR evidence:
 - TSR4 incremental caribou reserve add-back: **+8.4% short/mid, +2.2% long-term**.
 - TSR4 mature/old biodiversity removal in caribou LUs: **+4.0% short/mid, +2.5% long-term**.
 - TSR2 all-caribou removal: **+8.2% long-term**.
-- Current WS4 first-period UWR capacity comparison: **−43.6%**.
+- Current WS4 first-period UWR capacity comparison: **−43.5%**.
 
 Those are different questions and different baselines. The even-flow result is more relevant to AAC than the first-period capacity comparison, but it is still not a TSR-equivalent AAC determination.
 

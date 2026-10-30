@@ -16,9 +16,9 @@ The model is built and runs. The first-period caribou comparison is:
      - 79,102 ha
      - —
    * - ``s3_tsr5_base`` (UWR no-harvest)
-     - 13,660,939 m³
-     - 57,941 ha
-     - −43.6%
+     - 13,674,669 m³
+     - 57,962 ha
+     - −43.5%
 
 This is **capacity**, not AAC. The schedules harvest all eligible blocks at year 0. A multi-rotation WS4 optimization is required for an AAC estimate.
 
@@ -26,8 +26,8 @@ Model build
 -----------
 
 - FEMIC: 37,463 stands; 6,439 THLB stands; 79,102 ha THLB; 18 AUs; 1,008 curves; 0 TIPSY errors.
-- WS4: 40,660 fragments; 4,746 tracks; 54,510 features; 33,579 products; 94 accounts.
-- UWR filter: 108,458 ha flagged; 1,940 of 8,107 schedule rows excluded.
+- WS4: 40,660 fragments; 4,746 tracks; 101,970 features; 48,579 products; 279 accounts; 95 `feature.Seral.*` labels.
+- UWR filter: 108,458 ha flagged; 1,937 of 8,107 schedule rows excluded.
 
 Limitations
 -----------

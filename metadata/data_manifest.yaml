@@ -39,13 +39,18 @@ entries:
     mirror_path: bc/siteprod/Site_Prod_BC.gdb
     check: path
   - id: bec_v12
-    description: Biogeoclimatic ecosystem classification, version 12
-    source: BCGW WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY
-    version: "12"
-    status: to_fetch
+    description: Biogeoclimatic ecosystem classification, current BEC Map
+    source: BC Data Catalogue BEC Map, WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY
+    version: "current (BEC Map, fetched 2026-10-30)"
+    status: available
     required: false
-    fetch_command: femic data bcdc-resolve WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY
-    note: The provisional build uses the VRI BEC_ZONE_CODE/BEC_SUBZONE/BEC_VARIANT attributes. Fetch the polygon layer for the final cross-check.
+    local_path: data/downloads/bc/WHSE_FOREST_VEGETATION_BEC_BIOGEOCLIMATIC_POLY/WHSE_FOREST_VEGETATION_BEC_BIOGEOCLIMATIC_POLY.geojson
+    check: path
+    fetched_utc: "2026-10-30"
+    feature_count: 543
+    sha256: 100f14e1ab97ababe2d8dd06caf431c38f1d6e9da6e099de6eafb1b74abaa6c6
+    fetch_command: femic data bcdc-fetch WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY --bbox 1481038.6,655622.4,1582171.9,819973.0 --output-format geojson --download-root data/downloads/bc --instance-root .
+    note: Cross-checked against the VRI BEC_ZONE_CODE/BEC_SUBZONE/BEC_VARIANT attributes; see notes/reference/tsa27-input-availability.md.
   - id: landscape_units
     description: Landscape unit boundaries for LU/BEC seral accounting
     source: BCGW WHSE_LAND_USE_PLANNING.RMP_LANDSCAPE_UNIT_SVW
