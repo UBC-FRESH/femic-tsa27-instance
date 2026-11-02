@@ -93,7 +93,7 @@ the GPU path require `WS4_ROOT` on `PYTHONPATH`, which is documented in the repo
 
 | Run ID | Head commit | Conclusion | Notes |
 | --- | --- | --- | --- |
-| pending | report commit | pending | The report commit's CI run is posted on pull request #39 before approval. |
+| 41399239331 | `532583c` | success | Quality gates, Green dashboard summary, and Pre-commit parity all passed after the pandas-stubs fix. The only later change is the closeout refresh in this report. |
 
 ## 5. Deviations
 
