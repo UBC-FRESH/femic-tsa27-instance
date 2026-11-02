@@ -3,8 +3,8 @@
 Phase: P6 WS4 GPU watcher track
 Parent issue: #37
 Pull request: #39, `feature/p6-ws4-gpu-watcher` into `main`
-Evidence head: `a17f731`, the commit that tracks and ports the GPU watcher
-Report commit: the commit that adds this report. Its CI run is posted on the pull request.
+Evidence head: `532583c`, the commit that tracks and ports the GPU watcher and fixes the CI type check
+Report commit: the commit that refreshes this report. Its CI run is posted on the pull request.
 Date: 2026-11-02
 Status: queued for approval. Not merged.
 
@@ -41,8 +41,8 @@ Settings changes, each with its exact command. Each one runs only after its own 
   issue #38 was created immediately after and linked as a sub-issue.
 - Branch from `main`: `feature/p6-ws4-gpu-watcher` was created from the local `main`
   at `3b4b08e`.
-- Commit messages that start with task IDs: `a17f731` (`P6.1 ...`) and the report
-  commit.
+- Commit messages that start with task IDs: `a17f731` (`P6.1 ...`), `532583c`
+  (`P6.1 ...`), and the report commit.
 - Gates for each commit: section 3.
 - Roadmap and changelog in step: both were changed in `a17f731`; the report commit
   only adds this report.
@@ -56,7 +56,7 @@ Settings changes, each with its exact command. Each one runs only after its own 
 
 ## 3. Gate evidence
 
-At `a17f731`:
+At `532583c`:
 
 ```text
 GATE                STATUS   SECONDS
@@ -78,6 +78,12 @@ OK
 
 PYTHONPATH="$WS4_ROOT" python scripts/build_gpu_effect_table.py --help
 OK
+
+python -m mypy
+Success: no issues found in 48 source files
+
+python -m pytest tests -q
+329 passed
 ```
 
 The installed WS4 is older than the `candidate_cache` module; the script help and
@@ -95,6 +101,7 @@ the GPU path require `WS4_ROOT` on `PYTHONPATH`, which is documented in the repo
 | --- | --- | --- |
 | The script help fails against the installed WS4 | The installed WS4 predates `ws4.opt.candidate_cache` | The check is run with `PYTHONPATH="$WS4_ROOT"`; the report states the requirement |
 | The demo-sandbox handoff note remains untracked | It is outside P6 | Recorded here; not committed in this phase |
+| The first CI run failed on a pre-existing pandas-stubs type error in two operational scripts | The GitHub runner resolves a newer pandas-stubs than the local environment | `532583c` adds a `finite_float` helper and tests; the behavior is unchanged |
 
 ## 6. Next phase
 
