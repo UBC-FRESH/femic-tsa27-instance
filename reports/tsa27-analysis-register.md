@@ -54,6 +54,7 @@ S7/S8 target files are `config/ws4/targets/evenflow_caribou.yaml` and `evenflow_
 | Interim AAC-to-harvest attribution | Complete | `reports/tsa27-interim-attribution.md` | Bounded answer, not final decomposition |
 | Counterfactual synthesis | Complete | `reports/tsa27-counterfactual-synthesis.md` | Layer ranges, not additive; residual processing/undercut |
 | Executive brief | Complete | `reports/tsa27-executive-brief.md` | Two-page public-data answer and caveats |
+| GPU-GA watcher track | Implemented | `reports/tsa27-gpu-ga-track.md` | One-priority/no-patch/no-route prototype contract |
 | Public-data uncertainty envelope | Complete | `reports/tsa27-public-data-envelope.md` | Price/stumpage ranges; 2021–2022 robust, 2019/2025 not identified |
 | Nested public-data scenario grid | Complete | `reports/tsa27-nested-public-scenarios.md` | 240 combinations; 2021–2022 robust, 2019/2025 and 2023/2024 wide |
 | Public-data gap register | Complete | `reports/tsa27-public-data-gaps.md` | Each gap has a public source check and a model treatment |

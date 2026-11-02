@@ -101,3 +101,18 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - Added a dated BCTS South Interior volume-sold context series (4.3M m3 in 2018/19 to 2.2M m3 in 2021/22, -49%). It aligns with the quantity/processing interpretation but is BCTS-only, so it is context, not a calibrated total mill-demand driver.
 - QA close-out: fixed lint, format, strict typing, and numpydoc failures across the operational scripts. Added the operational analysis pipelines to the coverage omit list with a documented rationale: they are validated by reports and run artifacts, while the framework scripts remain at the 95% branch-coverage target. `python scripts/dashboard.py` is GREEN (lint, format, types, tests at 99.24%, validator, docs).
 - Added `reports/tsa27-executive-brief.md`, a two-page public-data answer covering the observed path, the four attribution layers, the 2019/2021/2025 interpretation, and the explicit range caveats.
+- Added the WS4 GPU-GA watcher track for TSA 27. A persisted target-independent effect table is built by `scripts/build_gpu_effect_table.py`; the S7/S8 watcher scripts now default to `ws4 gpu-watch` with `MODE=cpu` fallback. Local smoke: S8 20,000 generations at population 64 in 43.8 s.
+
+### P6.1 WS4 GPU watcher track formalized
+
+- Added `scripts/build_gpu_effect_table.py`, the GPU branch of the two even-flow
+  watcher scripts, and `scripts/run_watch_tsa27_fast_lns.sh` to the tracked
+  repository. The CPU watcher remains available through `MODE=cpu`.
+- Replaced the machine-specific `/tmp` default in the fast-LNS script with
+  `WS4_ROOT` (or the installed `ws4`, with the legacy `WS4_REPO` alias).
+- Documented the WS4 P85/P86 requirement and the P86 target semantics: a target
+  minimum is a one-sided penalty hinge, so the persistent 3,000,000 m3/period
+  penalty is an expected aspiration result, not a solver defect.
+- No caribou, land-base, matrix, growth, target, or AAC value changed.
+- Verification: `bash -n` on the three shell scripts; `python
+  scripts/build_gpu_effect_table.py --help`; `python scripts/dashboard.py` green.
