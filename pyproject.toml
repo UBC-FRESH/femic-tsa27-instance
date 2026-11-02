@@ -45,6 +45,7 @@ source = ["scripts"]
 # framework coverage gate. The framework scripts remain at the 95% branch-coverage target.
 omit = [
     "scripts/build_annual_snapshots.py",
+    "scripts/build_gpu_effect_table.py",
     "scripts/build_nested_public_scenarios.py",
     "scripts/build_oldest_first_seed.py",
     "scripts/build_operational_pilot.py",

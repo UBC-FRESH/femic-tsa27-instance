@@ -18,6 +18,7 @@ parent issue exists and the maintainer approves it.
 | P3 WS4 dataset | #19 | `feature/p3-ws4-build` | complete |
 | P4 Caribou scenarios | #25 | `feature/p4-caribou` | complete |
 | P5 Publish and release | #31 | `feature/p5-release` | complete |
+| P6 WS4 GPU watcher track | #37 | `feature/p6-ws4-gpu-watcher` | active |
 
 ## Lifecycle Map
 
@@ -156,11 +157,42 @@ Acceptance criteria:
 - The host repository pins a reviewed instance commit.
 - The release notes state the limitations and the unpublished-TSR uncertainty.
 
+## Phase 6: WS4 GPU watcher track
+
+Parent issue: #37
+Branch: `feature/p6-ws4-gpu-watcher`
+Status: active
+
+Goal: formalize the TSA 27 WS4 GPU-GA watcher track, make it portable across WS4
+checkouts, and document its target semantics against the P85/P86 WS4 line without
+changing any caribou, land-base, or AAC assumption.
+
+- [x] P6.1 Formalize and port the TSA 27 WS4 GPU watcher track (#38)
+  - [x] Track the persisted-effect-table builder and GPU watcher scripts.
+  - [x] Remove the machine-specific WS4 default and document `WS4_ROOT`.
+  - [x] Record the P85/P86 requirement and the P86 soft-floor semantics.
+  - [x] Keep the CPU watcher fallback.
+  - [x] Update the report, roadmap, and changelog.
+  - [x] Run `bash -n`, the script help, and the dashboard.
+  - [x] Queue the phase pull request.
+
+Acceptance criteria:
+
+- The tracked scripts contain no `/tmp` default path.
+- The GPU path is selected by default; `MODE=cpu` retains the CPU watcher.
+- The report explains why a persistent even-flow penalty is expected.
+- No caribou, land-base, matrix, growth, target, or AAC value changes.
+- The dashboard is green.
+
 ## Detailed Next Steps Notes
 
-1. Create the GitHub repository and the Phase 0 parent/child issues. This needs maintainer
-   approval; the maintainer's instruction names the owner, visibility, and purpose.
-2. Activate Phase 0 by setting its parent issue number and its status to `active`, here and
-   in the tracker map.
-3. Create `feature/p0-bootstrap` from `main` and work P0.1–P0.5 one task at a time.
-4. Stop after P0 and report the evidence. Do not start P1 until the P0 close-out is approved.
+1. P0-P5 are complete: the instance is public, the model and caribou scenarios are
+   built, and the public-data results are published.
+2. P6 is active: the WS4 P83 GPU-GA watcher track is now tracked, portable through
+   `WS4_ROOT`, and documented against the P85/P86 requirements and the P86
+   one-sided target semantics. The 3,000,000 m3/period floor remains a scenario
+   aspiration; a persistent penalty is expected and is not a solver defect.
+3. The next phase, if the maintainer wants to continue, is a report-only forest
+   condition card after the WS4 P90 contract merges, or a TSA 27 ALS inventory
+   feasibility audit. Neither is activated here.
+

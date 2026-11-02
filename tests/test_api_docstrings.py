@@ -38,7 +38,8 @@ def public_qualnames() -> list[str]:
         try:
             module = importlib.import_module(path.stem)
         except ModuleNotFoundError as error:
-            if error.name in optional:
+            missing = error.name or ""
+            if missing in optional or any(missing.startswith(f"{name}.") for name in optional):
                 continue
             raise
         for name, value in getmembers(module, isfunction):
