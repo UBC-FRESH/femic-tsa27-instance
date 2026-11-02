@@ -121,3 +121,18 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
   `scripts/build_operational_pilot.py`, and added `tests/test_operational_helpers.py`.
   This resolves the pandas-stubs `arg-type` failure on the GitHub runner; the
   conversion behavior is unchanged.
+
+### P7.1 TSA 27 ALS inventory feasibility
+
+- Added `scripts/audit_als_inventory_feasibility.py`, the P7 go/no-go report, a
+  machine-readable summary, and the `docs/als-inventory-feasibility.rst` page.
+- TSA 27 has 67 FAIB plots (63 ICH, 4 ESSF), all PSP_G, but none measured since 2018;
+  the last visits are 1992-2013.
+- The LidarBC discovery has 160 point-cloud tiles (2019: 153, 2021: 7) covering
+  23,008.1 ha, or 3.03% of TSA 27, by tile bounding box.
+- 13 plots fall inside the footprint, all ICH, with 18-27 year plot/LiDAR offsets.
+  22 plots are within 5 km and 33 within 10 km of a tile.
+- Decision: **no-go** for an operational local first-return inventory. A research
+  pilot is possible only as a time-lag stress test, not a calibration.
+- No point cloud was downloaded, no card was fit, and no model value changed.
+- Verification: `python scripts/dashboard.py` green; focused helper tests pass.
