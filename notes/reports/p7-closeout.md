@@ -81,7 +81,7 @@ Focused audit output:
 
 | Run ID | Head commit | Conclusion | Notes |
 | --- | --- | --- | --- |
-| pending | report commit | pending | The report commit's CI run is posted on pull request #42 before approval. |
+| 41403109125 | `52bc2bd` | success | Quality gates, Green dashboard summary, and Pre-commit parity passed. The only later change is this CI-table refresh. |
 
 ## 5. Deviations
 
