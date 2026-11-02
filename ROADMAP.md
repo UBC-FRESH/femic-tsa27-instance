@@ -18,7 +18,8 @@ parent issue exists and the maintainer approves it.
 | P3 WS4 dataset | #19 | `feature/p3-ws4-build` | complete |
 | P4 Caribou scenarios | #25 | `feature/p4-caribou` | complete |
 | P5 Publish and release | #31 | `feature/p5-release` | complete |
-| P6 WS4 GPU watcher track | #37 | `feature/p6-ws4-gpu-watcher` | active |
+| P6 WS4 GPU watcher track | #37 | `feature/p6-ws4-gpu-watcher` | complete |
+| P7 TSA 27 ALS inventory feasibility | #40 | `feature/p7-als-inventory-feasibility` | active |
 
 ## Lifecycle Map
 
@@ -161,7 +162,7 @@ Acceptance criteria:
 
 Parent issue: #37
 Branch: `feature/p6-ws4-gpu-watcher`
-Status: active
+Status: complete
 
 Goal: formalize the TSA 27 WS4 GPU-GA watcher track, make it portable across WS4
 checkouts, and document its target semantics against the P85/P86 WS4 line without
@@ -184,15 +185,42 @@ Acceptance criteria:
 - No caribou, land-base, matrix, growth, target, or AAC value changes.
 - The dashboard is green.
 
+## Phase 7: TSA 27 ALS inventory feasibility
+
+Parent issue: #40
+Branch: `feature/p7-als-inventory-feasibility`
+Status: active
+
+Goal: decide whether TSA 27 has enough public FAIB plots and LidarBC point-cloud
+coverage to justify a local first-return inventory pilot, and publish a go/no-go
+audit without acquiring data or changing the model.
+
+- [x] P7.1 Audit TSA 27 FAIB plots and LidarBC point-cloud coverage (#41)
+  - [x] Summarize the FAIB plots in TSA 27.
+  - [x] Summarize the point-cloud tiles and footprint.
+  - [x] Measure plot-to-tile overlap, time offsets, and nearest distances.
+  - [x] Publish the go/no-go report and machine-readable summary.
+  - [x] Update the docs, roadmap, and changelog.
+  - [x] Run the dashboard and queue the phase pull request.
+
+Acceptance criteria:
+
+- The report records plot counts, BEC composition, recent plots, tile years,
+  footprint, and TSA share.
+- The report records overlap counts, time offsets, and nearest distances.
+- The decision is explicit and names the missing acquisition or plot evidence.
+- No point cloud is downloaded, no card is fit, and no model value changes.
+- The dashboard is green.
+
 ## Detailed Next Steps Notes
 
-1. P0-P5 are complete: the instance is public, the model and caribou scenarios are
-   built, and the public-data results are published.
-2. P6 is active: the WS4 P83 GPU-GA watcher track is now tracked, portable through
-   `WS4_ROOT`, and documented against the P85/P86 requirements and the P86
-   one-sided target semantics. The 3,000,000 m3/period floor remains a scenario
-   aspiration; a persistent penalty is expected and is not a solver defect.
-3. The next phase, if the maintainer wants to continue, is a report-only forest
-   condition card after the WS4 P90 contract merges, or a TSA 27 ALS inventory
-   feasibility audit. Neither is activated here.
+1. P0-P6 are complete: the instance is public, the model and caribou scenarios are
+   built, the public-data results are published, and the WS4 GPU watcher track is
+   tracked and portable.
+2. P7 is active: the TSA 27 ALS feasibility audit is a **no-go** for an operational
+   local inventory. There are 67 FAIB plots (63 ICH, 4 ESSF), but none since 2018;
+   160 point-cloud tiles cover 3.03% of the TSA, and the 13 overlapping plots have
+   18-27 year offsets. See `reports/tsa27-als-inventory-feasibility.md`.
+3. A defensible local pilot needs re-measured plots or contemporary point clouds over
+   recent plots. No model, caribou, target, or AAC value changed.
 

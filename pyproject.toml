@@ -44,6 +44,7 @@ source = ["scripts"]
 # Operational analysis pipelines are validated by their reports and run artifacts, not by the
 # framework coverage gate. The framework scripts remain at the 95% branch-coverage target.
 omit = [
+    "scripts/audit_als_inventory_feasibility.py",
     "scripts/build_annual_snapshots.py",
     "scripts/build_gpu_effect_table.py",
     "scripts/build_nested_public_scenarios.py",

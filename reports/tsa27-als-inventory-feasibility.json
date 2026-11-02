@@ -1,0 +1,187 @@
+{
+  "boundary_ha": 758443.6791994022,
+  "nearest_distance_m": {
+    "max": 47479.48615636969,
+    "median": 10368.099866613282,
+    "min": 0.0
+  },
+  "plot_count": 67,
+  "plots_by_bec": {
+    "ESSF": 4,
+    "ICH": 63
+  },
+  "plots_by_establishment": {
+    "PSP_G": 67
+  },
+  "plots_with_pointcloud": 13,
+  "plots_with_pointcloud_detail": [
+    {
+      "bec": "ICH",
+      "bec_subzone": "mw",
+      "last_year": 1992,
+      "offset_years": [
+        27
+      ],
+      "pc_years": [
+        2019
+      ],
+      "site_identifier": "4021258"
+    },
+    {
+      "bec": "ICH",
+      "bec_subzone": "mw",
+      "last_year": 1992,
+      "offset_years": [
+        27
+      ],
+      "pc_years": [
+        2019
+      ],
+      "site_identifier": "4021333"
+    },
+    {
+      "bec": "ICH",
+      "bec_subzone": "mw",
+      "last_year": 1992,
+      "offset_years": [
+        27
+      ],
+      "pc_years": [
+        2019
+      ],
+      "site_identifier": "4021334"
+    },
+    {
+      "bec": "ICH",
+      "bec_subzone": "mw",
+      "last_year": 1992,
+      "offset_years": [
+        27
+      ],
+      "pc_years": [
+        2019
+      ],
+      "site_identifier": "4021335"
+    },
+    {
+      "bec": "ICH",
+      "bec_subzone": "mw",
+      "last_year": 1992,
+      "offset_years": [
+        27
+      ],
+      "pc_years": [
+        2019
+      ],
+      "site_identifier": "4021336"
+    },
+    {
+      "bec": "ICH",
+      "bec_subzone": "mw",
+      "last_year": 1992,
+      "offset_years": [
+        27
+      ],
+      "pc_years": [
+        2019
+      ],
+      "site_identifier": "4021338"
+    },
+    {
+      "bec": "ICH",
+      "bec_subzone": "mw",
+      "last_year": 1992,
+      "offset_years": [
+        27
+      ],
+      "pc_years": [
+        2019
+      ],
+      "site_identifier": "4021339"
+    },
+    {
+      "bec": "ICH",
+      "bec_subzone": "mw",
+      "last_year": 1992,
+      "offset_years": [
+        27
+      ],
+      "pc_years": [
+        2019
+      ],
+      "site_identifier": "4021340"
+    },
+    {
+      "bec": "ICH",
+      "bec_subzone": "mw",
+      "last_year": 2001,
+      "offset_years": [
+        18
+      ],
+      "pc_years": [
+        2019
+      ],
+      "site_identifier": "4021341"
+    },
+    {
+      "bec": "ICH",
+      "bec_subzone": "mw",
+      "last_year": 1995,
+      "offset_years": [
+        24
+      ],
+      "pc_years": [
+        2019
+      ],
+      "site_identifier": "4021342"
+    },
+    {
+      "bec": "ICH",
+      "bec_subzone": "mw",
+      "last_year": 1994,
+      "offset_years": [
+        25
+      ],
+      "pc_years": [
+        2019
+      ],
+      "site_identifier": "4021343"
+    },
+    {
+      "bec": "ICH",
+      "bec_subzone": "mw",
+      "last_year": 1994,
+      "offset_years": [
+        25
+      ],
+      "pc_years": [
+        2019
+      ],
+      "site_identifier": "4021344"
+    },
+    {
+      "bec": "ICH",
+      "bec_subzone": "wk",
+      "last_year": 1993,
+      "offset_years": [
+        26
+      ],
+      "pc_years": [
+        2019
+      ],
+      "site_identifier": "4022491"
+    }
+  ],
+  "plots_within_10km": 33,
+  "plots_within_5km": 22,
+  "pointcloud_footprint_ha": 23008.101871945983,
+  "pointcloud_footprint_pct": 3.0335939902924456,
+  "pointcloud_tile_count": 160,
+  "pointcloud_years": {
+    "2019": 153,
+    "2021": 7
+  },
+  "recent_distance_m": null,
+  "recent_plot_count": 0,
+  "recent_since": 2018
+}

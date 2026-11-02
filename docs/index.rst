@@ -13,6 +13,7 @@ and cite it in their reports. Start with the repository's ``AGENTS.md`` and ``RO
 
    overview
    data-provenance
+   als-inventory-feasibility
    model-design
    model-results
    limitations
