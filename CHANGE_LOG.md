@@ -116,3 +116,8 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - No caribou, land-base, matrix, growth, target, or AAC value changed.
 - Verification: `bash -n` on the three shell scripts; `python
   scripts/build_gpu_effect_table.py --help`; `python scripts/dashboard.py` green.
+- CI compatibility: replaced the `pd.notna` calls on route namedtuple values with a
+  small `finite_float` helper in `scripts/build_operational_screen.py` and
+  `scripts/build_operational_pilot.py`, and added `tests/test_operational_helpers.py`.
+  This resolves the pandas-stubs `arg-type` failure on the GitHub runner; the
+  conversion behavior is unchanged.

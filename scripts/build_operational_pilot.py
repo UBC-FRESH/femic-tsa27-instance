@@ -61,6 +61,26 @@ MILLS = {
 }
 
 
+def finite_float(value: object) -> float | None:
+    """Return a finite float, or ``None`` for a missing or non-numeric value.
+
+    Parameters
+    ----------
+    value : object
+        Value to convert.
+
+    Returns
+    -------
+    float | None
+        Finite float, or ``None``.
+    """
+    try:
+        parsed = float(str(value))
+    except (TypeError, ValueError):
+        return None
+    return parsed if math.isfinite(parsed) else None
+
+
 def parse_args() -> argparse.Namespace:
     """Return command-line options.
 
@@ -154,14 +174,13 @@ def main() -> None:
     if args.routes.is_file():
         route_frame = pd.read_csv(args.routes)
         for route in route_frame.itertuples(index=False):
-            if pd.notna(route.total_km):
-                route_km[(int(str(route.block_id)), str(route.destination))] = float(
-                    str(route.total_km)
-                )
-            if hasattr(route, "total_cost_per_m3") and pd.notna(route.total_cost_per_m3):
-                route_cost[(int(str(route.block_id)), str(route.destination))] = float(
-                    str(route.total_cost_per_m3)
-                )
+            total_km = finite_float(route.total_km)
+            if total_km is not None:
+                route_km[(int(str(route.block_id)), str(route.destination))] = total_km
+            if hasattr(route, "total_cost_per_m3"):
+                total_cost = finite_float(route.total_cost_per_m3)
+                if total_cost is not None:
+                    route_cost[(int(str(route.block_id)), str(route.destination))] = total_cost
 
     if args.mills == "all":
         active_mills = dict(MILLS)
