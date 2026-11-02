@@ -183,5 +183,6 @@
   },
   "recent_distance_m": null,
   "recent_plot_count": 0,
-  "recent_since": 2018
+  "recent_since": 2018,
+  "request_buffer_m": 2000.0
 }

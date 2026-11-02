@@ -13,7 +13,7 @@ import argparse
 import json
 from collections import Counter
 from pathlib import Path
-from typing import Any
+from typing import Any, cast
 
 import geopandas as gpd
 import pandas as pd
@@ -101,8 +101,65 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--visits", type=Path)
     parser.add_argument("--selection", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--request-csv", type=Path)
+    parser.add_argument("--request-buffer-m", type=float, default=2000.0)
     parser.add_argument("--recent-since", type=int, default=DEFAULT_RECENT_SINCE)
     return parser.parse_args()
+
+
+def request_table(inside: pd.DataFrame, buffer_m: float) -> pd.DataFrame:
+    """Return one acquisition-request row per plot.
+
+    Parameters
+    ----------
+    inside : pandas.DataFrame
+        Plot rows with point-cloud fields.
+    buffer_m : float
+        Request buffer around each plot, in metres.
+
+    Returns
+    -------
+    pandas.DataFrame
+        Request rows with a square bounding box in EPSG:3005.
+    """
+    rows: list[dict[str, Any]] = []
+    for _, row in inside.iterrows():
+        point = cast(Point, row["geometry"])
+        bounds = point.buffer(buffer_m).bounds
+        years = [int(year) for year in cast(list[int], row["pc_years"])]
+        last_year = int(cast(float, row["last_year"]))
+        offsets = [year - last_year for year in years] if years else []
+        nearest = float(cast(float, row["nearest_pc_m"]))
+        if years:
+            priority = "high"
+        elif nearest <= 5000:
+            priority = "medium"
+        else:
+            priority = "secondary"
+        rows.append(
+            {
+                "site_identifier": str(row["SITE_IDENTIFIER"]),
+                "tsa": cast(float, row["TSA"]),
+                "bec_zone": cast(str, row["BEC_ZONE"]),
+                "bec_subzone": cast(str, row["BEC_SBZ"]),
+                "establishment": cast(str, row["SAMPLE_ESTABLISHMENT_TYPE"]),
+                "last_year": last_year,
+                "visits": cast(int, row["visits"]),
+                "x_epsg3005": float(cast(float, row["BC_ALBERS_X"])),
+                "y_epsg3005": float(cast(float, row["BC_ALBERS_Y"])),
+                "has_pointcloud": bool(years),
+                "pc_years": ",".join(str(year) for year in years),
+                "offset_years": ",".join(str(offset) for offset in offsets),
+                "nearest_pc_m": nearest,
+                "request_priority": priority,
+                "request_bbox_minx": bounds[0],
+                "request_bbox_miny": bounds[1],
+                "request_bbox_maxx": bounds[2],
+                "request_bbox_maxy": bounds[3],
+                "request_bbox_area_ha": (bounds[2] - bounds[0]) * (bounds[3] - bounds[1]) / 10000.0,
+            }
+        )
+    return pd.DataFrame(rows).sort_values(["request_priority", "nearest_pc_m", "site_identifier"])
 
 
 def main() -> None:
@@ -119,6 +176,9 @@ def main() -> None:
             .reset_index()
         )
         plots = plots.merge(visit_summary, on="SITE_IDENTIFIER", how="left")
+    else:
+        plots["last_year"] = pd.NA
+        plots["visits"] = pd.NA
     plots = plots.dropna(subset=["BC_ALBERS_X", "BC_ALBERS_Y"]).copy()
     points = gpd.GeoDataFrame(
         plots,
@@ -178,9 +238,12 @@ def main() -> None:
             inside.loc[inside["recent"], "nearest_pc_m"].tolist()
         ),
         "plots_with_pointcloud_detail": detail,
+        "request_buffer_m": args.request_buffer_m,
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    if args.request_csv is not None:
+        request_table(inside, args.request_buffer_m).to_csv(args.request_csv, index=False)
     print(json.dumps(summary, indent=2, sort_keys=True))
 
 

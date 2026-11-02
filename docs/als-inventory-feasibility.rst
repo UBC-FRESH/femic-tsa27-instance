@@ -34,10 +34,21 @@ The defensible options are:
 3. Add recent plots inside the existing footprint.
 4. Keep the VRI-based model and treat ALS as research-only.
 
+Acquisition request
+-------------------
+
+The P8 request package asks for remeasurement of the 13 overlapping ICH plots and
+contemporary point clouds. The high-priority 2 km request union is 13,475.4 ha; the
+all-plot union is 60,367.9 ha. See
+`reports/tsa27-als-acquisition-request.md` and
+`reports/tsa27-als-acquisition-request.csv`.
+
 Evidence
 --------
 
 - `reports/tsa27-als-inventory-feasibility.md`
+- `reports/tsa27-als-acquisition-request.md`
+- `reports/tsa27-als-acquisition-request.csv`
 - `reports/tsa27-als-inventory-feasibility.json`
 - `scripts/audit_als_inventory_feasibility.py`
 
