@@ -136,3 +136,18 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
   pilot is possible only as a time-lag stress test, not a calibration.
 - No point cloud was downloaded, no card was fit, and no model value changed.
 - Verification: `python scripts/dashboard.py` green; focused helper tests pass.
+
+### P8.1 TSA 27 ALS acquisition request
+
+- Extended `scripts/audit_als_inventory_feasibility.py` with an optional per-plot
+  request table (`--request-csv`, `--request-buffer-m`).
+- Published `reports/tsa27-als-acquisition-request.csv` with all 67 FAIB plots:
+  13 high-priority ICH plots inside the 2019 point-cloud footprint, 9 medium within
+  5 km, and 45 secondary. Each row carries BEC, last visit, point-cloud year, offset,
+  EPSG:3005 coordinates, nearest tile distance, and a 2 km bbox.
+- Added the partner-facing memo `reports/tsa27-als-acquisition-request.md` and linked
+  it from the ALS feasibility page.
+- Request footprints: 13,475.4 ha union for the 13 high-priority plots; 60,367.9 ha
+  union for all 67. High-priority offsets are 18-27 years.
+- No point cloud was downloaded, no plot was remeasured, and no model value changed.
+- Verification: `python scripts/dashboard.py` green; focused helper tests pass.

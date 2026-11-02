@@ -19,7 +19,8 @@ parent issue exists and the maintainer approves it.
 | P4 Caribou scenarios | #25 | `feature/p4-caribou` | complete |
 | P5 Publish and release | #31 | `feature/p5-release` | complete |
 | P6 WS4 GPU watcher track | #37 | `feature/p6-ws4-gpu-watcher` | complete |
-| P7 TSA 27 ALS inventory feasibility | #40 | `feature/p7-als-inventory-feasibility` | active |
+| P7 TSA 27 ALS inventory feasibility | #40 | `feature/p7-als-inventory-feasibility` | complete |
+| P8 TSA 27 ALS acquisition request | #43 | `feature/p8-als-acquisition-request` | active |
 
 ## Lifecycle Map
 
@@ -189,7 +190,7 @@ Acceptance criteria:
 
 Parent issue: #40
 Branch: `feature/p7-als-inventory-feasibility`
-Status: active
+Status: complete
 
 Goal: decide whether TSA 27 has enough public FAIB plots and LidarBC point-cloud
 coverage to justify a local first-return inventory pilot, and publish a go/no-go
@@ -212,15 +213,43 @@ Acceptance criteria:
 - No point cloud is downloaded, no card is fit, and no model value changes.
 - The dashboard is green.
 
+## Phase 8: TSA 27 ALS acquisition request
+
+Parent issue: #43
+Branch: `feature/p8-als-acquisition-request`
+Status: active
+
+Goal: turn the P7 no-go result into a concrete acquisition and plot-remeasurement
+request, without acquiring data or changing the model.
+
+- [x] P8.1 Publish the TSA 27 ALS acquisition request (#44)
+  - [x] Extend the feasibility audit with the request table.
+  - [x] Generate the 67-plot request table with the 13 overlapping plots flagged.
+  - [x] Write the partner-facing memo.
+  - [x] Link the request from the ALS feasibility page.
+  - [x] Update the roadmap/changelog and queue the PR.
+
+Acceptance criteria:
+
+- The table has 67 rows; 13 high-priority overlapping ICH plots.
+- Each high-priority row records the 2019 point-cloud year and 18-27 year offset.
+- Each row has a 2 km EPSG:3005 bbox and area.
+- No point cloud is downloaded, no plot is remeasured, and no model value changes.
+- The dashboard is green.
+
 ## Detailed Next Steps Notes
 
 1. P0-P6 are complete: the instance is public, the model and caribou scenarios are
    built, the public-data results are published, and the WS4 GPU watcher track is
    tracked and portable.
-2. P7 is active: the TSA 27 ALS feasibility audit is a **no-go** for an operational
+2. P7 is complete: the TSA 27 ALS feasibility audit is a **no-go** for an operational
    local inventory. There are 67 FAIB plots (63 ICH, 4 ESSF), but none since 2018;
    160 point-cloud tiles cover 3.03% of the TSA, and the 13 overlapping plots have
    18-27 year offsets. See `reports/tsa27-als-inventory-feasibility.md`.
-3. A defensible local pilot needs re-measured plots or contemporary point clouds over
-   recent plots. No model, caribou, target, or AAC value changed.
+3. P8 is active: the acquisition request covers all 67 plots; 13 high-priority ICH
+   plots inside the 2019 footprint (18-27 year offsets), 9 medium within 5 km, and 45
+   secondary. The high-priority 2 km request union is 13,475.4 ha. See
+   `reports/tsa27-als-acquisition-request.md`.
+4. A defensible local pilot needs remeasured plots and contemporary point clouds. No
+   model, caribou, target, or AAC value changed.
 
